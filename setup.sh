@@ -24,12 +24,12 @@ echo "Linking dotfiles"
 dotfiles=(
 	zshrc
 	bashrc
-	vimrc
 	gitconfig
   xinitrc
   Xresources
   profile
 )
+#vimrc
 for dotfile in ${dotfiles[@]}; do
 	ln -sfn $DEST/$dotfile $HOME/.$dotfile
 done
