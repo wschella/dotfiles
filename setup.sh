@@ -23,13 +23,13 @@ mkdir -p $HOME/.vim/tmp/{backup,swap}
 echo "Linking dotfiles"
 dotfiles=(
 	zshrc
-	gitconfig
 	bashrc
 	vimrc
 )
 for dotfile in $dotfiles; do
-	ln -fn $DEST/$dotfile $HOME/.$dotfile
+	ln -sfn $DEST/$dotfile $HOME/.$dotfile
 done
+ln -sf $DEST/gitconfig $HOME/.gitconfig
 
 echo "updating Bundles"
 vim +BundleInstall! +qall
