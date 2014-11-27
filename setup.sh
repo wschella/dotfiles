@@ -1,4 +1,4 @@
-# /usr/bin/bash
+#!/usr/bin/bash
 
 REPO=http://github.com/SirDestrox/dotfiles
 DEST="$HOME/.dotfiles"
@@ -27,7 +27,7 @@ dotfiles=(
 	vimrc
 	gitconfig
 )
-for dotfile in $dotfiles; do
+for dotfile in ${dotfiles[@]}; do
 	ln -sfn $DEST/$dotfile $HOME/.$dotfile
 done
 
