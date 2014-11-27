@@ -6,7 +6,6 @@ metry: 84x25
  *loginshell: true
 
 ! right hand side scrollbar...
-!xterm*rightScrollBar: true
 *scrollBar: false
 
 ! stop output to terminal from jumping down to bottom of scroll again
@@ -30,47 +29,11 @@ metry: 84x25
 *color14: rgb:54/fc/fc
 *color15: rgb:fc/fc/fc
 
-
-
-! URxvt
-! -----
-
-! Because tmux doesnt like rxvt-unicode-256color
-urxvt.termName: rxvt-unicode
-
-! Perls
- URxvt.perl-ext-common:  default,matcher,tabbedex,font-size
-
-! matcher: clickable urls
-URxvt.url-launcher:     /usr/bin/googl-chrome-stable
-URxvt.matcher.button:   1
-
-! tabbedex: tabs
-URxvt.tabbed.autohide:  true
-
-! font-size: zooming live
-URxvt.keysym.C-S-Up:    perl:font-size:increase
-URxvt.keysym.C-S-Down:  perl:font-size:decrease
-URxvt.iso14755:         false
-URxvt.iso14755_52:      false
-
-! Use a nice truetype font and size by default...
-URxvt.font: xft:Source Code Pro for Powerline:size=10
-! URxvt.letterSpace: -1
-
-! Foreground and transparent background ([xx] == xx% opacity)
-URxvt.depth: 32
-urxvt*foreground: rgb:f8/f8/f8
-urxvt*background: [75]rgb:00/00/00
-
-
-
 ! xterm
 ! -----
 
 ! Use a nice truetype font and size by default...
 xterm*faceName: SourceCodePro:style=Regular:size=10
-xterm*faceSize: 11
 
 ! double-click to select whole URLs :D
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
@@ -79,4 +42,4 @@ xterm*foreground: rgb:f8/f8/f8
 xterm*background: rgb:00/00/00
 
 ! Using alt as a meta key.
-XTerm*metaSendsEscape: true
+xterm*metaSendsEscape: true
