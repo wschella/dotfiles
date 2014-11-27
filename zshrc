@@ -26,7 +26,7 @@ alias ls='ls -G'
 alias please='sudo $(fc -ln -1)'
 alias pacman='sudo pacman'
 alias google-chrome-stable='nohup goolge-chrome-stable&| exit'
-alias git push origing master='git push origin master'
+alias "git push origing master"='git push origin master'
 
 #prompt
 setopt prompt_subst
