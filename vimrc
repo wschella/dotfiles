@@ -11,7 +11,6 @@ Bundle 'fugitive.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
 Bundle 'Shougo/vimproc'
-Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimshell'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/nerdcommenter'
@@ -86,7 +85,7 @@ let g:solarized_underline=0
 let g:solarized_termtrans=0
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme elflord
 " }}}
 " Wrapping {{{
 set nowrap

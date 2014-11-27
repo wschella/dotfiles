@@ -34,4 +34,3 @@ done
 echo "updating Bundles"
 vim +BundleInstall! +qall
 
-reset
