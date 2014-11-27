@@ -25,11 +25,11 @@ dotfiles=(
 	zshrc
 	bashrc
 	vimrc
+	gitconfig
 )
 for dotfile in $dotfiles; do
 	ln -sfn $DEST/$dotfile $HOME/.$dotfile
 done
-ln -sf $DEST/gitconfig $HOME/.gitconfig
 
 echo "updating Bundles"
 vim +BundleInstall! +qall
