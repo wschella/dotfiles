@@ -324,7 +324,7 @@ endfunction
 nnoremap <leader>bc :call PipeToBc()<CR>
 " }}}
 " Unite {{{
-  nnoremap <leader><leader> :<C-u>Unite -start-insert file_rec/async<CR>
+  nnoremap <leader><leader> :<C-u>NERDTree<CR>
 " }}}
 
 " for some reason vim searches for something
