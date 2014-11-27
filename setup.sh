@@ -26,6 +26,9 @@ dotfiles=(
 	bashrc
 	vimrc
 	gitconfig
+  xinitrc
+  Xresources
+  profile
 )
 for dotfile in ${dotfiles[@]}; do
 	ln -sfn $DEST/$dotfile $HOME/.$dotfile
