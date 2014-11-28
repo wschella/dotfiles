@@ -28,12 +28,12 @@ dotfiles=(
   xinitrc
   Xresources
   profile
-)
-#vimrc
+  vimrc
+  )
 for dotfile in ${dotfiles[@]}; do
 	ln -sfn $DEST/$dotfile $HOME/.$dotfile
 done
 
 echo "updating Bundles"
-vim +BundleInstall! +qall
+#vim +BundleInstall! +qall
 

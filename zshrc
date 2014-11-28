@@ -18,19 +18,26 @@ export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 export EDITOR=vim
 
+#colors
 autoload colors
 colors
+
+#oh-my-zsh
+ZSH=/usr/share/oh-my-zsh
+plugins=(command-not-found)
+#source $ZSH/oh-my-zsh.sh
+
 
 #alias
 alias ls='ls -G'
 alias please='sudo $(fc -ln -1)'
 alias pacman='sudo pacman'
-alias google-chrome-stable='nohup goolge-chrome-stable&| exit'
+alias google-chrome-stable='nohup google-chrome-stable&| exit'
 alias "git push origing master"='git push origin master'
 
 #prompt
 setopt prompt_subst
-PROMPT='[%T]%{$fg[red]%} %n@%m %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} %(?.✔.✗) '
+PROMPT='[%T]%{$fg[cyan]%} %n@%m %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} %(?.✔.✗) '
 
 #conf shortcutfunctie
 conf() {

@@ -11,10 +11,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 xrdb ~/.Xresources
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
+xset +fp ~/.fonts
+xset +fb /usr/share/fonts/local
+xset fp rehash
+hsetroot -tile /home/wout/.config/fossilized.jpg
+
+unclutter -grab -noevents -root &
+urxvtd &
+xterm
 sxhkd &
-xterm &
 exec bspwm

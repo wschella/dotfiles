@@ -1,9 +1,9 @@
-/bin/bash: Slightly: command not found
+/bin/bash:
 metry: 84x25
 
 ! Every shell is a login shell by default (for inclusion of all necessary
 ! environment variables)
- *loginshell: true
+*loginshell: true
 
 ! right hand side scrollbar...
 *scrollBar: false
@@ -12,28 +12,28 @@ metry: 84x25
 *scrollTtyOutput: false
 
 ! fancy cryptic colours
-*color0: rgb:00/00/00
-*color1: rgb:a8/00/00
-*color2: rgb:00/a8/00
-*color3: rgb:a8/54/00
-*color4: rgb:00/00/a8
-*color5: rgb:a8/00/a8
-*color6: rgb:00/a8/a8
-*color7: rgb:a8/a8/a8
-*color8: rgb:54/54/54
-*color9: rgb:fc/54/54
-*color10: rgb:54/fc/54
-*color11: rgb:fc/fc/54
-*color12: rgb:54/54/fc
-*color13: rgb:fc/54/fc
-*color14: rgb:54/fc/fc
-*color15: rgb:fc/fc/fc
+!*color0: rgb:00/00/00
+!*color1: rgb:a8/00/00
+!*color2: rgb:00/a8/00
+!*color3: rgb:a8/54/00
+!*color4: rgb:00/00/a8
+!*color5: rgb:a8/00/a8
+!*color6: rgb:00/a8/a8
+!*color7: rgb:a8/a8/a8
+!*color8: rgb:54/54/54
+!*color9: rgb:fc/54/54
+!*color10: rgb:54/fc/54
+!*color11: rgb:fc/fc/54
+!*color12: rgb:54/54/fc
+!*color13: rgb:fc/54/fc
+!*color14: rgb:54/fc/fc
+!*color15: rgb:fc/fc/fc
 
 ! xterm
 ! -----
 
 ! Use a nice truetype font and size by default...
-xterm*faceName: SourceCodePro:style=Regular:size=10
+xterm*faceName: SourceCodePro:style=Regular:size=11
 
 ! double-click to select whole URLs :D
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
@@ -43,3 +43,27 @@ xterm*background: rgb:00/00/00
 
 ! Using alt as a meta key.
 xterm*metaSendsEscape: true
+
+! urxvt
+! -----
+urxvt*termName: rxvt-unicode
+urxvt*perl-ext-common: default,clipboard
+urxvt*url-launcher: google-chorme-stable
+urxvt*internalBorder: 5
+
+! Use a nice truetype font and size by default...
+URxvt*faceName: SourceCodePro:style=Regular:size=11
+
+! double-click to select whole URLs :D
+URxvt*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+urxvt*foreground: rgb:f8/f8/f8
+URxvt*background: rgb:00/00/00
+
+! Using alt as a meta key.
+URxvt*metaSendsEscape: true
+
+!Enabling copy-pasterino
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+
