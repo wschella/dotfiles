@@ -17,10 +17,10 @@ bindkey -e
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 export EDITOR=vim
+export XDG_CONFIG_HOME="/home/wout/.config"
 
 #colors
-autoload colors
-colors
+autoload colors && colors
 
 #oh-my-zsh
 ZSH=/usr/share/oh-my-zsh
@@ -31,9 +31,12 @@ plugins=(command-not-found)
 #alias
 alias ls='ls -G'
 alias please='sudo $(fc -ln -1)'
+alias pingering='ping -c 3 www.google.com'
 alias pacman='sudo pacman'
 alias google-chrome-stable='nohup google-chrome-stable&| exit'
-alias "git push origing master"='git push origin master'
+alias firefox='nohup firefox&| exit'
+alias LELS='ls'
+alias comp='cd /home/wout/Documents/UGent/ComputerGebruik'
 
 #prompt
 setopt prompt_subst

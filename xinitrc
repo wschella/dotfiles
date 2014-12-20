@@ -15,9 +15,10 @@ xset +fp ~/.fonts
 xset +fb /usr/share/fonts/local
 xset fp rehash
 hsetroot -tile /home/wout/.config/fossilized.jpg
+export XDG_CONFIG_HOME="/home/wout/.config"
 
+exec gnome-session
 unclutter -grab -noevents -root &
-urxvtd &
-xterm
-sxhkd &
-exec bspwm
+#urxvtd &
+#docky &
+#sxhkd &

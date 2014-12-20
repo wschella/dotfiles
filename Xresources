@@ -11,29 +11,11 @@ metry: 84x25
 ! stop output to terminal from jumping down to bottom of scroll again
 *scrollTtyOutput: false
 
-! fancy cryptic colours
-!*color0: rgb:00/00/00
-!*color1: rgb:a8/00/00
-!*color2: rgb:00/a8/00
-!*color3: rgb:a8/54/00
-!*color4: rgb:00/00/a8
-!*color5: rgb:a8/00/a8
-!*color6: rgb:00/a8/a8
-!*color7: rgb:a8/a8/a8
-!*color8: rgb:54/54/54
-!*color9: rgb:fc/54/54
-!*color10: rgb:54/fc/54
-!*color11: rgb:fc/fc/54
-!*color12: rgb:54/54/fc
-!*color13: rgb:fc/54/fc
-!*color14: rgb:54/fc/fc
-!*color15: rgb:fc/fc/fc
-
 ! xterm
 ! -----
 
 ! Use a nice truetype font and size by default...
-xterm*faceName: SourceCodePro:style=Regular:size=11
+xterm*faceName: Source\ Code\ Pro\-Regular:size=11
 
 ! double-click to select whole URLs :D
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
@@ -46,18 +28,52 @@ xterm*metaSendsEscape: true
 
 ! urxvt
 ! -----
-urxvt*termName: rxvt-unicode
-urxvt*perl-ext-common: default,clipboard
-urxvt*url-launcher: google-chorme-stable
-urxvt*internalBorder: 5
+URxvt*font: xft:Source\ Code\ Pro\ Medium:size=12:antialias=true
+URxvt*faceName: SourceCodePro:style=Regular:size=12
+URxvt*perl-ext-common: default,clipboard
+URxvt*url-launcher: firefox
+URxvt*internalBorder: 5
 
-! Use a nice truetype font and size by default...
-URxvt*faceName: SourceCodePro:style=Regular:size=11
+
+!colors
+!------
+
+!Black
+URxvt*color0:           #262626
+URxvt*color8:           #252525
+
+!Red
+URxvt*color1:           #C12121
+URxvt*color9:           #E50E0E
+
+!Green
+URxvt*color2:           #597b20
+URxvt*color10:          #89b83f
+
+!Yellow
+URxvt*color3:           #Ded838
+URxvt*color11:          #efef60
+
+!Blue
+URxvt*color4:           #265997
+URxvt*color12:          #3F6FD0
+
+!Magenta
+URxvt*color5:           #706c9a
+URxvt*color13:          #826ab1
+
+!Cyan
+URxvt*color6:           #69a2b0
+URxvt*color14:          #a1cdcd
+
+!White
+URxvt*color7:           #BBBBBB
+URxvt*color15:          #EEEEEF
 
 ! double-click to select whole URLs :D
 URxvt*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-urxvt*foreground: rgb:f8/f8/f8
+URxvt*foreground: rgb:f8/f8/f8
 URxvt*background: rgb:00/00/00
 
 ! Using alt as a meta key.

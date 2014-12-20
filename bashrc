@@ -7,3 +7,5 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
+export  XDG_CONFIG_HOME="/home/wout/.config"
+
