@@ -85,7 +85,7 @@ let g:solarized_underline=0
 let g:solarized_termtrans=0
 syntax enable
 set background=dark
-colorscheme elflord
+colorscheme Tomorrow-Night
 " }}}
 " Wrapping {{{
 set nowrap
