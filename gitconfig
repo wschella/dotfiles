@@ -1,19 +1,22 @@
 [user]
 	name = Wout Schellaert
 	email = Wout.Schellaert@UGent.be
+
 [color]
   ui = true
+
 [core]
   editor = vim
-	excludesfile = /Users/silox/.gitignore_global
+
 [alias]
   co = checkout
   unstage = reset HEAD --
-[push]
-  default = current
+
 [help]
   autocorrect = 1
+
 [github]
 	user = SirDestrox
+
 [hub]
 	host = github.ugent.be

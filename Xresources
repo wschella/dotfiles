@@ -1,85 +1,50 @@
 /bin/bash:
 metry: 84x25
 
-! Every shell is a login shell by default (for inclusion of all necessary
-! environment variables)
+! Every shell is a login shell by default.
 *loginshell: true
 
-! right hand side scrollbar...
+! No right side scrollbar
 *scrollBar: false
-
-! stop output to terminal from jumping down to bottom of scroll again
-*scrollTtyOutput: false
-
-! xterm
-! -----
-
-! Use a nice truetype font and size by default...
-xterm*faceName: Source\ Code\ Pro\-Regular:size=11
-
-! double-click to select whole URLs :D
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-
-xterm*foreground: rgb:f8/f8/f8
-xterm*background: rgb:00/00/00
-
-! Using alt as a meta key.
-xterm*metaSendsEscape: true
 
 ! urxvt
 ! -----
 URxvt*font: xft:Source\ Code\ Pro\ Medium:size=12:antialias=true
 URxvt*faceName: SourceCodePro:style=Regular:size=12
-URxvt*perl-ext-common: default,clipboard
-URxvt*url-launcher: firefox
 URxvt*internalBorder: 5
-
-
-!colors
-!------
-
-!Black
-URxvt*color0:           #262626
-URxvt*color8:           #252525
-
-!Red
-URxvt*color1:           #C12121
-URxvt*color9:           #E50E0E
-
-!Green
-URxvt*color2:           #597b20
-URxvt*color10:          #89b83f
-
-!Yellow
-URxvt*color3:           #Ded838
-URxvt*color11:          #efef60
-
-!Blue
-URxvt*color4:           #265997
-URxvt*color12:          #3F6FD0
-
-!Magenta
-URxvt*color5:           #706c9a
-URxvt*color13:          #826ab1
-
-!Cyan
-URxvt*color6:           #69a2b0
-URxvt*color14:          #a1cdcd
-
-!White
-URxvt*color7:           #BBBBBB
-URxvt*color15:          #EEEEEF
-
-! double-click to select whole URLs :D
-URxvt*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-
-URxvt*foreground: rgb:f8/f8/f8
 URxvt*background: rgb:00/00/00
+URxvt*foreground: rgb:f8/f8/f8
 
-! Using alt as a meta key.
-URxvt*metaSendsEscape: true
+!   colors
+!   ------
+!   Black
+    URxvt*color0:           #262626
+    URxvt*color8:           #252525
 
-!Enabling copy-pasterino
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: False
+!   Red
+    URxvt*color1:           #C12121
+    URxvt*color9:           #E50E0E
 
+!   Green
+    URxvt*color2:           #597b20
+    URxvt*color10:          #89b83f
+
+!   Yellow
+    URxvt*color3:           #Ded838
+    URxvt*color11:          #efef60
+
+!   Blue
+    URxvt*color4:           #265997
+    URxvt*color12:          #3F6FD0
+
+!   Magenta
+    URxvt*color5:           #706c9a
+    URxvt*color13:          #826ab1
+
+!   Cyan
+    URxvt*color6:           #69a2b0
+    URxvt*color14:          #a1cdcd
+
+!   White
+    URxvt*color7:           #BBBBBB
+    URxvt*color15:          #EEEEEF

@@ -21,19 +21,28 @@ echo "Creating tmp dirs in .vim"
 mkdir -p $HOME/.vim/tmp/{backup,swap}
 
 echo "Linking dotfiles"
+
 dotfiles=(
 	zshrc
 	bashrc
 	gitconfig
   xinitrc
   Xresources
-  profile
   vimrc
   )
-for dotfile in ${dotfiles[@]}; do
-	ln -sfn $DEST/$dotfile $HOME/.$dotfile
-done
 
-echo "updating Bundles"
-#vim +BundleInstall! +qall
+basicdotfiles=(
+  zshrc
+  bashrc
+  vimrc
+)
 
+if [ $1 == "-e" ];then
+  for dotfile in ${dotfiles[@]}; do
+	  ln -sfn $DEST/$dotfile $HOME/.$dotfile
+  done
+else
+  for dotfile in ${basicdotfiles[@]}; do
+    ln -sfn $DEST/$dotfile $HOME/.$dotfile
+  done
+fi
