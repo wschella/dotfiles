@@ -12,3 +12,8 @@ if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
+# Include prompt from a seperate file
+if [ -f $HOME/.bashrc_prompt ]; then
+    source $HOME/.bashrc_prompt
+fi
+
