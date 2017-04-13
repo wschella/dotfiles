@@ -2,11 +2,16 @@ __powerline() {
 
     # Unicode symbols
     readonly PS_SYMBOL_LINUX='$'
-    readonly PS_SYMBOL_OTHER='%'
-    readonly GIT_BRANCH_SYMBOL=' '
+    readonly PS_SYMBOL_SUCCES="^.^"
+    readonly PS_SYMBOL_ERROR="o.0"
+    readonly PL_RIGHT_ARROW=''
+    readonly PL_RIGHT_ARROW_BLACK=''
+    readonly PL_LEFT_ARROW=''
+    readonly PL_LEFT_ARROW_BLACK=''
+    readonly GIT_BRANCH_SYMBOL=''
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
-    readonly GIT_NEED_PUSH_SYMBOL=''
-    readonly GIT_NEED_PULL_SYMBOL=''
+    readonly GIT_NEED_PUSH_SYMBOL='^'
+    readonly GIT_NEED_PULL_SYMBOL='v'
     
     # Solarized colorscheme
     if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
@@ -89,16 +94,7 @@ __powerline() {
     readonly BOLD="\[$(tput bold)\]"
 
     if [[ -z "$PS_SYMBOL" ]]; then
-      case "$(uname)" in
-          Darwin)
-              PS_SYMBOL=$PS_SYMBOL_DARWIN
-              ;;
-          Linux)
-              PS_SYMBOL=$PS_SYMBOL_LINUX
-              ;;
-          *)
-              PS_SYMBOL=$PS_SYMBOL_OTHER
-      esac
+        PS_SYMBOL=$PS_SYMBOL_LINUX
     fi
 
     __git_info() { 
@@ -122,7 +118,8 @@ __powerline() {
         [ -n "$behindN" ] && marks+=" $GIT_NEED_PULL_SYMBOL$behindN"
 
         # print the git branch segment without a trailing newline
-        printf " $GIT_BRANCH_SYMBOL$branch$marks "
+        printf " $branch$marks "
+	# printf " $GIT_BRANCH_SYMBOL$branch$marks "
     }
 
     ps1() {
@@ -130,11 +127,14 @@ __powerline() {
         # colors in the prompt accordingly. 
         if [ $? -eq 0 ]; then
             local BG_EXIT="$BG_GREEN"
+            PS_SYMBOL=$PS_SYMBOL_SUCCES
         else
             local BG_EXIT="$BG_RED"
+            PS_SYMBOL=$PS_SYMBOL_ERROR
         fi
 
-        PS1="$BG_BASE1$FG_BASE3 \w $RESET"
+        PS1="$BG_BASE1$FG_BASE3 \u@\H $RESET"
+        PS1+="$BG_BASE1$FG_BASE3 \w $RESET"
         # Bash by default expands the content of PS1 unless promptvars is disabled.
         # We must use another layer of reference to prevent expanding any user
         # provided strings, which would cause security issues.
