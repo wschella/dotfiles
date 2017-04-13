@@ -18,6 +18,9 @@ dotfiles=(
 basicdotfiles=(
   ssh/config
   gitconfig
+  bashrc
+  bashrc_default
+  bash_aliases
 )
 
 if [[ $1 == "-e" ]];then
