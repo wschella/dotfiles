@@ -20,12 +20,14 @@ basicdotfiles=(
   gitconfig
 )
 
-if [ $1 == "-e" ];then
+if [[ $1 == "-e" ]];then
   for dotfile in ${dotfiles[@]}; do
-	  ln -sfn $DEST/$dotfile $HOME/.$dotfile
+    echo "Linking $dotfile"
+    ln -sfn $DEST/$dotfile $HOME/.$dotfile
   done
 else
   for dotfile in ${basicdotfiles[@]}; do
+    echo "Linking $dotfile"
     ln -sfn $DEST/$dotfile $HOME/.$dotfile
   done
 fi
