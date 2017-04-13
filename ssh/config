@@ -1,0 +1,40 @@
+# Battlebots
+Host zeus
+    IdentityFile ~/.ssh/ssh
+    Port 2222
+    User destro
+    Hostname zeus.ugent.be
+
+# Haldis
+Host haldis
+    IdentityFile ~/.ssh/ssh
+    Port 2222
+    User haldis
+    Hostname zeus.ugent.be
+
+Host battlebots
+    IdentityFile ~/.ssh/ssh
+    Port 2222
+    User battlebots
+    Hostname zeus.ugent.be
+
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/git_standard
+    User git
+
+Host github.ugent.be
+    HostName github.ugent.be
+    IdentityFile ~/.ssh/git_ugent
+    User git
+
+Host vop
+    HostName vopro2.ugent.be
+    IdentityFile ~/.ssh/git_ugent
+    User admin
+    Port 2002
+
+Host itech
+    HostName 193.190.127.173
+    User groep34
+    IdentityFile ~/.ssh/ssh    

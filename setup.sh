@@ -1,6 +1,6 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-REPO=http://github.com/SirDestrox/dotfiles
+REPO=http://github.com/wschella/dotfiles
 DEST="$HOME/.dotfiles"
 
 if [[ -d $DEST ]];then
@@ -16,6 +16,8 @@ dotfiles=(
 )
 
 basicdotfiles=(
+  ssh/config
+  gitconfig
 )
 
 if [ $1 == "-e" ];then
