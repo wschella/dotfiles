@@ -17,3 +17,7 @@ if [ -f $HOME/.bashrc_prompt ]; then
     source $HOME/.bashrc_prompt
 fi
 
+# Include Rust env
+if [ -f $HOME/.cargo/env ]; then
+    source $HOME/.cargo/env
+fi
