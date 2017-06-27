@@ -5,8 +5,9 @@
 	name = Wout Schellaert
 [core]
 	autocrlf = input
+	eol = lf
 	editor = vim
-	whitespace = lf-at-eol
+	safecrlf = false
 [alias]
 	st = status
 	addaa = add -A :/
@@ -15,7 +16,11 @@
 	ci = commit 
 	diffc = diff --cached
 	co = checkout 
+	cp = cherry-pick
 	
+	# Amend changes to last commit, keep it's metadata
+	amend = "!git commit --amend -C HEAD"
+
 	# Diff last commit
 	last = show
 	
