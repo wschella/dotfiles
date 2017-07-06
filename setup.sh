@@ -22,6 +22,7 @@ basicdotfiles=(
   bashrc_default
   bashrc_prompt
   bash_aliases
+  inputrc
 )
 
 if [[ $1 == "-e" ]];then
