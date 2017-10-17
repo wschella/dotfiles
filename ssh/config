@@ -1,9 +1,15 @@
-# Battlebots
+# Zeus
 Host zeus
     IdentityFile ~/.ssh/ssh
     Port 2222
     User destro
     Hostname zeus.ugent.be
+
+# HPC
+Host hpc
+    IdentityFile ~/.ssh/ssh
+    User vsc42469
+    Hostname login.hpc.ugent.be
 
 # Haldis
 Host haldis
@@ -12,28 +18,39 @@ Host haldis
     User haldis
     Hostname zeus.ugent.be
 
-Host battlebots
+# MOZAIC
+Host mozaic
     IdentityFile ~/.ssh/ssh
     Port 2222
-    User battlebots
+    User mozaic
     Hostname zeus.ugent.be
 
+# GitHub
 Host github.com
     HostName github.com
     IdentityFile ~/.ssh/git_standard
     User git
 
+# UGent GitHub
 Host github.ugent.be
     HostName github.ugent.be
     IdentityFile ~/.ssh/git_ugent
     User git
 
+# IDLab GitLab
+Host git.datasciencelab.ugent.be
+   HostName git.datasciencelab.ugent.be
+   IdentityFile ~/.ssh/git_standard
+   User git
+
+# VOP
 Host vop
     HostName vopro2.ugent.be
     IdentityFile ~/.ssh/git_ugent
     User admin
     Port 2002
 
+# ITech
 Host itech
     HostName 193.190.127.173
     User groep34

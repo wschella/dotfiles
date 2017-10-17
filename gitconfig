@@ -20,6 +20,7 @@
 	
 	# Amend changes to last commit, keep it's metadata
 	amend = "!git commit --amend -C HEAD"
+	amenda = "!git commit --amend -C HEAD -a"
 
 	# Diff last commit
 	last = show
