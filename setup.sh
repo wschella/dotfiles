@@ -13,6 +13,7 @@ fi
 echo "Linking dotfiles"
 
 dotfiles=(
+  pylintrc
 )
 
 basicdotfiles=(

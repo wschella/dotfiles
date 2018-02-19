@@ -1,11 +1,26 @@
 # Include the standard .bashrc
-# It's in a seperate to avoid clutter
+# It's in a seperate file to avoid clutter
 if [ -f $HOME/.bashrc_default ]; then
     source $HOME/.bashrc_default
 fi
 
-# Bash on Windows doesn't correctly apply umask
+
+# WSL doesn't correctly apply umask
 umask 022
+
+# Export graphic session to WSL
+export DISPLAY=:0
+
+# Set some cd aliases and cdpath things
+shopt -s cdable_vars
+export work="/mnt/d/Workspace/"
+export CDPATH=":/mnt/d/Workspace/"
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# Add Python Userbase to PATH
+export PATH=$PATH:$HOME/.local/bin
 
 # Fix NPM global install problems
 NPM_PACKAGES="${HOME}/.npm-packages"

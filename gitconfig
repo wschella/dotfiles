@@ -8,6 +8,7 @@
 	eol = lf
 	editor = vim
 	safecrlf = false
+	excludesfile = /home/destro/.gitignore_global
 [alias]
 	st = status
 	addaa = add -A :/
@@ -47,7 +48,8 @@
 	# Push the current branch to the remote "origin", and set it to track
 	# the upstream branch
 	pushup = "!git push -u origin $(git branch-name)"
-	
+	pullup = "!git branch --set-upstream-to origin/$(git branch-name); git pull"	
+
 	# Graphic logtree	
 	tree = "!git log --graph --oneline --decorate --all"
 	

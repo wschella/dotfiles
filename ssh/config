@@ -5,6 +5,12 @@ Host zeus
     User destro
     Hostname zeus.ugent.be
 
+# DigitalOcean Droplet
+Host do
+    IdentityFile ~/.ssh/ssh
+    User destro
+    Hostname 104.131.171.36
+
 # HPC
 Host hpc
     IdentityFile ~/.ssh/ssh
@@ -30,6 +36,13 @@ Host github.com
     HostName github.com
     IdentityFile ~/.ssh/git_standard
     User git
+
+# Hydra
+Host hydra
+    IdentityFile ~/.ssh/ssh
+    User hydra
+    Port 2222
+    Hostname zeus.ugent.be
 
 # UGent GitHub
 Host github.ugent.be
