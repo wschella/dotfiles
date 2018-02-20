@@ -21,9 +21,9 @@ basicdotfiles=(
   gitconfig
   bashrc
   bashrc_default
-  bashrc_prompt
   bash_aliases
   inputrc
+  bash_prompt
 )
 
 if [[ $1 == "-e" ]];then

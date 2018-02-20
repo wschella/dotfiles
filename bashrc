@@ -40,7 +40,8 @@ fi
 if [[ $- =~ i ]]; then
     # Include prompt from a seperate file
     if [ -f $HOME/.bashrc_prompt ]; then
-        source $HOME/.bashrc_prompt
+        # GIT_PROMPT_ONLY_IN_REPO=1
+        source ~/.bash_prompt/gitprompt.sh
     fi
 fi
 
