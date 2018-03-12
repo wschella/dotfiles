@@ -14,9 +14,11 @@ echo "Linking dotfiles"
 
 dotfiles=(
   pylintrc
+  config/inkscape/templates
 )
 
 basicdotfiles=(
+  gitignore
   ssh/config
   gitconfig
   bashrc
