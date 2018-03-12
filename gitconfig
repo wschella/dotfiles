@@ -8,7 +8,7 @@
 	eol = lf
 	editor = vim
 	safecrlf = false
-	excludesfile = /home/destro/.gitignore_global
+	excludesfile = /home/wout/.gitignore
 [alias]
 	st = status
 	addaa = add -A :/
@@ -67,3 +67,9 @@
 	
 	# Default short log
 	le = "!git log --oneline --decorate"	
+	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+[pull]
+	rebase = true

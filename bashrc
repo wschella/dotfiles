@@ -6,15 +6,15 @@ fi
 
 
 # WSL doesn't correctly apply umask
-umask 022
+# umask 022
 
 # Export graphic session to WSL
-export DISPLAY=:0
+# export DISPLAY=:0
 
 # Set some cd aliases and cdpath things
 shopt -s cdable_vars
 export work="/mnt/d/Workspace/"
-export CDPATH=":/mnt/d/Workspace/"
+export CDPATH=":/mnt/d/Workspace/:/home/wout/data/Workspace/"
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
@@ -29,6 +29,10 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
+# Save gems userlocal
+GEM_HOME=$HOME/.gems
+GEM_PATH=$HOME/.gems:/usr/lib/ruby/gems/2.3
+
 # Bash on Windows sounds are horrible
 set bell-style none
 
@@ -39,7 +43,7 @@ fi
 
 if [[ $- =~ i ]]; then
     # Include prompt from a seperate file
-    if [ -f $HOME/.bashrc_prompt ]; then
+    if [ -f $HOME/.bash_prompt/gitprompt.sh ]; then
         # GIT_PROMPT_ONLY_IN_REPO=1
         source ~/.bash_prompt/gitprompt.sh
     fi
