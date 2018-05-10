@@ -14,6 +14,7 @@ echo "Linking dotfiles"
 
 dotfiles=(
   pylintrc
+  config/pep8
   config/inkscape/templates
 )
 

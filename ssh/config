@@ -31,6 +31,13 @@ Host mozaic
     User mozaic
     Hostname zeus.ugent.be
 
+# Bottlebats
+Host bottlebats
+   IdentityFile ~/.ssh/ssh
+   Port 2222
+   User bottlebats
+   Hostname zeus.ugent.be
+
 # GitHub
 Host github.com
     HostName github.com
