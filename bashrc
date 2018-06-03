@@ -22,9 +22,10 @@ fi
 # Add Python Userbase to PATH
 export PATH=$PATH:$HOME/.local/bin
 
-# Fix NPM global install problems
+# Fix NPM/yarn global install problems
 NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:$PATH"
+YARN_PACKAGES="${HOME}/.yarn"
+PATH="$NPM_PACKAGES/bin:$YARN_PACKAGES/bin:$PATH"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"

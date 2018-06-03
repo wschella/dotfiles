@@ -1,0 +1,15 @@
+directory: ~/data/Music/Library
+library: ~/data/Music/Resources/library.db
+plugins: fetchart inline lyrics fromfilename
+paths:
+    default: $albumartist/[$original_year] $album%aunique{}%ifdef{tags, [$tags]}/$track - $title
+    singleton: $albumartist/Non-Album/[$original_year] $title
+    comp: Compilations/[$original_year] $album%aunique{}/$track - $title
+
+album_fields:
+    tags: |
+        import re
+        maps = {'live': 'Live', 'ep': 'EP', 'remix': 'Remix', 'single': 'Single'}
+        match = re.search(r'(live|ep|remix|single)', albumtype, re.I)
+        if match:
+            return maps.get(match.group(0).lower())
