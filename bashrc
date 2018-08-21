@@ -13,8 +13,7 @@ fi
 
 # Set some cd aliases and cdpath things
 shopt -s cdable_vars
-export work="/mnt/d/Workspace/"
-export CDPATH=":/mnt/d/Workspace/:/home/wout/data/Workspace/"
+export CDPATH=":/media/wout/Data/Workspace:/media/wout/Data"
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
