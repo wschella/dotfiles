@@ -14,7 +14,7 @@ echo "Linking dotfiles"
 
 dotfiles=(
   pylintrc
-  config/beets/.config
+  config/beets/config.yaml
   config/pep8
   config/inkscape/templates
 )
