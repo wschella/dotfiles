@@ -29,13 +29,6 @@ PATH="$NPM_PACKAGES/bin:$YARN_PACKAGES/bin:$PATH"
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
-# Save gems userlocal
-GEM_HOME=$HOME/.gems
-GEM_PATH=$HOME/.gems:/usr/lib/ruby/gems/2.3
-
-# Bash on Windows sounds are horrible
-set bell-style none
-
 # Include aliases from a seperate file
 if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
