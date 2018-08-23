@@ -1,4 +1,12 @@
 $include /etc/inputrc
-set show-all-if-ambiguous on
-set completion-ignore-case On
-set bell-style none
+
+# https://tiswww.case.edu/php/chet/readline/rluserman.html#SEC9
+
+set show-all-if-ambiguous on # single tab autocomplete
+set bell-style none # disable bell
+
+set colored-stats on
+set colored-completion-prefix on
+
+set completion-ignore-case on
+set completion-map-case on

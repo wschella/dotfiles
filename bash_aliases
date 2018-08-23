@@ -1,3 +1,7 @@
-alias python='python3'
-alias fuk='sudo $(fc -ln -1)'
-alias latexwatch='latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pvc -pdf'
+alias python="python3"
+alias fuck="sudo $(fc -ln -1)"
+alias please="sudo $(fc -ln -1)"
+alias latexwatch="latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pvc -pdf"
+alias ls="ls -ahGl --color=auto"
+alias nanocl="bundle exec nanoc --live"
+alias rebash="dotter -d ~/.dotfiles deploy && bash"

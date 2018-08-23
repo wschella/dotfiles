@@ -19,17 +19,18 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 if [ -f $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
+    . $HOME/.bash_aliases
 fi
 
 if [ -f $HOME/.bash_prompt ]; then
-    source $HOME/.bash_prompt
+    . $HOME/.bash_prompt
 fi
 
 #------------------------------------------------------------------------------
 # Path / CD tweaks
 #------------------------------------------------------------------------------
-
+shopt -s cdspell # Correct small typo's
+# complete -d cd # Complete only directories
 shopt -s cdable_vars
 export CDPATH=":/media/wout/Data/Workspace:/media/wout/Data"
 
