@@ -34,14 +34,6 @@ if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
-if [[ $- =~ i ]]; then
-    # Include prompt from a seperate file
-    if [ -f $HOME/.bash_prompt/gitprompt.sh ]; then
-        # GIT_PROMPT_ONLY_IN_REPO=1
-        source ~/.bash_prompt/gitprompt.sh
-    fi
-fi
-
 # Include Rust env
 if [ -f $HOME/.cargo/env ]; then
     source $HOME/.cargo/env
