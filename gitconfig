@@ -1,75 +1,73 @@
 [push]
-	default = simple
+  default = simple
+
 [user]
-	email = wout.schellaert@gmail.com
-	name = Wout Schellaert
+  email = wout.schellaert@gmail.com
+  name = Wout Schellaert
+
 [core]
-	autocrlf = input
-	eol = lf
-	editor = vim
-	safecrlf = false
-	excludesfile = /home/wout/.gitignore
-[alias]
-	st = status
-	addaa = add -A :/
-	adda = add -A .
-	st = status -s
-	ci = commit 
-	diffc = diff --cached
-	co = checkout 
-	cp = cherry-pick
-	
-	# Amend changes to last commit, keep it's metadata
-	amend = "!git commit --amend -C HEAD"
-	amenda = "!git commit --amend -C HEAD -a"
+  autocrlf = input
+  eol = lf
+  editor = vim
+  safecrlf = false
+  excludesfile = /home/wout/.gitignore
 
-	# Diff last commit
-	last = show
-	
-	# Unstage all staged changes 
-	unst = "!git reset HEAD -- ."
-	
-	# Assume a file as unchanged
-	assume = "!git update-index --assume-unchanged"
-
-	# Unassume a file
-	unassume = "!git update-index --no-assume-unchanged"
-	
-	# List assumed files
-	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
-
-	# Unasume all files
-	unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
-
-	# Get the current branch name (not so useful in itself, but used in
-	# other aliases)
-	branch-name = "!git rev-parse --abbrev-ref HEAD"
-
-	# Push the current branch to the remote "origin", and set it to track
-	# the upstream branch
-	pushup = "!git push -u origin $(git branch-name)"
-	pullup = "!git branch --set-upstream-to origin/$(git branch-name); git pull"	
-
-	# Graphic logtree	
-	tree = "!git log --graph --oneline --decorate --all"
-	
-	# Pretty one line log
-	ls = "!git log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate"
-
-	# Pretty log with files changed
-	ll = "!git log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --numstat"
-
-	# Pretty one line log with dates
-	lds = "!git log --pretty=format:'%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --date=short"
-	
-	# Pretty one line log with relative dates
-	ld = "!git log --pretty=format:'%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --date=relative"
-	
-	# Default short log
-	le = "!git log --oneline --decorate"	
-	pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-	pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
-	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 [pull]
-	rebase = true
+  rebase = true
+
+[color]
+  ui = auto
+
+[alias]
+  br = branch
+  ci = commit
+  co = checkout 
+  cp = cherry-pick
+  st = status -s
+  s = status -s
+
+  a  = add -A .
+  aa = add -A :/
+
+  today = diff @{yesterday}.. --stat # see what we did today
+  last  = log -1 HEAD
+  diffc = diff --cached
+  diffh = diff HEAD
+  
+  ciam = commit -am
+
+  amen  = commit --amend --no-edit
+  amena = commit --amend --no-edit --all
+  
+  back = reset HEAD~
+  unstage = reset HEAD -- .
+  unstagea = reset HEAD :/
+
+  assume   = update-index --assume-unchanged    # Assume a file as unchanged
+  unassume = update-index --no-assume-unchanged # Unassume a file
+  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"  # List assumed files
+  unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+
+  # Get the current branch name (used in other aliases)
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+  # Push to (pull from) remote, and track
+  pushup = "!git push -u origin $(git branch-name)"
+  pullup = "!git branch --set-upstream-to origin/$(git branch-name); git pull"  
+
+  logr = log --reverse
+  # Graphic logtree
+  tree = "!git logr --graph --oneline --decorate --all -r"
+  # Pretty one line log with relative dates
+  l = "!git logr --pretty=format:'%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --date=relative"
+  # Pretty one line log with absolute dates
+  la = "!git logr --pretty=format:'%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --date=short"
+  # Simple one line log
+  ls = "!git logr --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate" 
+  # Default short log
+  lss = "!git logr --oneline --decorate"
+  # Pretty log with files changed (extended) 
+  le = "!git logr --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --numstat"
+
+  pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
