@@ -21,7 +21,7 @@ fi
 # https://github.com/sscherfke/rust-vcprompt
 export VCP_PREFIX=""
 export VCP_NAME=""  # You can use "value" or "symbol" here
-export VCP_BRANCH="{blue}{value}{reset} "
+export VCP_BRANCH="{blue}{value}{reset}"
 export VCP_OPERATION="{red}{value}{reset}"
 export VCP_BEHIND="↓{value}"
 export VCP_AHEAD="↑{value}"
@@ -39,6 +39,17 @@ if hash vcprompt 2> /dev/null; then
 else
   __HAVE_VCPROMPT=0
 fi
+
+wschellas_stashed_git() {
+  local num_stashed=0
+  stash_file="$( git rev-parse --git-dir )/logs/refs/stash"
+  if [[ -e "${stash_file}" ]]; then
+    num_stashed="$(git stash list | wc --line)"
+  fi
+  if [ $num_stashed != 0 ]; then
+    echo -n "$num_stashed⚑"
+  fi
+}
 
 mitsuhikos_vcprompt() {
   path=`pwd`
@@ -98,7 +109,7 @@ export __BASEPROMPT='\e]0;\007\n\e${__USER_COLOR}\u \
 \e${__GRAY_COLOR}at \e${__ORANGE_COLOR}\h \
 \e${__GRAY_COLOR}in \e${__GREEN_COLOR}\w\
 `mitsuhikos_lastcommandfailed`\
-\e${__GRAY_COLOR} on `mitsuhikos_vcprompt`\
+\e${__GRAY_COLOR} on `mitsuhikos_vcprompt` `wschellas_stashed_git`\
 `mitsuhikos_backgroundjobs`\
 `mitsuhikos_virtualenv`\
 \e${__DEFAULT_COLOR}'

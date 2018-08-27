@@ -55,7 +55,7 @@
   pushup = "!git push -u origin $(git branch-name)"
   pullup = "!git branch --set-upstream-to origin/$(git branch-name); git pull"  
 
-  logr = log --reverse
+  logr = log --reverse -n 20
   # Graphic logtree
   tree = "!git logr --graph --oneline --decorate --all -r"
   # Pretty one line log with relative dates
