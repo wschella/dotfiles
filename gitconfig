@@ -33,7 +33,7 @@
   last  = log -1 HEAD
   diffc = diff --cached
   diffh = diff HEAD
-  
+
   ciam = commit -am
 
   amen  = commit --amend --no-edit

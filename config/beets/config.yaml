@@ -1,5 +1,5 @@
-directory: ~/data/Music/Library
-library: ~/data/Music/Resources/library.db
+directory: /media/wout/Data/Music/Library/
+library: /media/wout/Data/Music/Resources/library.db
 plugins: fetchart inline lyrics fromfilename
 paths:
     default: $albumartist/[$original_year] $album%aunique{}%ifdef{tags, [$tags]}/$track - $title

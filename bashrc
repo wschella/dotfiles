@@ -26,6 +26,8 @@ if [ -f $HOME/.bash_prompt ]; then
     . $HOME/.bash_prompt
 fi
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 #------------------------------------------------------------------------------
 # Path / CD tweaks
 #------------------------------------------------------------------------------
@@ -34,3 +36,4 @@ shopt -s cdspell # Correct small typo's
 shopt -s cdable_vars
 export CDPATH=":/media/wout/Data/Workspace:/media/wout/Data"
 
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"

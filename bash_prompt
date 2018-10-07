@@ -42,10 +42,7 @@ fi
 
 wschellas_stashed_git() {
   local num_stashed=0
-  stash_file="$( git rev-parse --git-dir )/logs/refs/stash"
-  if [[ -e "${stash_file}" ]]; then
-    num_stashed="$(git stash list | wc --line)"
-  fi
+  num_stashed="$(git stash list | wc --line)"
   if [ $num_stashed != 0 ]; then
     echo -n "$num_stashed⚑"
   fi
@@ -54,8 +51,9 @@ wschellas_stashed_git() {
 mitsuhikos_vcprompt() {
   path=`pwd`
   prompt="$__VC_PROMPT_EX"
-  if [ $__HAVE_VCPROMPT == 1 ]; then
-    vcprompt "$prompt"
+  inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+  if [ $__HAVE_VCPROMPT == 1 ] && [ "$inside_git_repo" ]; then
+    echo -n "on $(vcprompt $prompt) `wschellas_stashed_git`"
   fi
 }
 
@@ -109,7 +107,7 @@ export __BASEPROMPT='\e]0;\007\n\e${__USER_COLOR}\u \
 \e${__GRAY_COLOR}at \e${__ORANGE_COLOR}\h \
 \e${__GRAY_COLOR}in \e${__GREEN_COLOR}\w\
 `mitsuhikos_lastcommandfailed`\
-\e${__GRAY_COLOR} on `mitsuhikos_vcprompt` `wschellas_stashed_git`\
+\e${__GRAY_COLOR} `mitsuhikos_vcprompt`\
 `mitsuhikos_backgroundjobs`\
 `mitsuhikos_virtualenv`\
 \e${__DEFAULT_COLOR}'

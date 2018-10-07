@@ -10,4 +10,5 @@ gitconfig = "~/.gitconfig"
 gitignore = "~/.gitignore"
 inputrc = "~/.inputrc"
 pylintrc = "~/.pylintrc"
-  
+
+"mozilla/MaterialFox/chrome" = "~/.mozilla/firefox/vlfr4wgj.default/chrome"
