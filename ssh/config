@@ -1,21 +1,14 @@
+#-------------------------------------------------------------------------------
 # Zeus
-Host zeus
+#-------------------------------------------------------------------------------
+
+# Gamification
+Host game
+    ForwardAgent yes
     IdentityFile ~/.ssh/ssh
+    User gamification
     Port 2222
-    User destro
     Hostname zeus.ugent.be
-
-# DigitalOcean Droplet
-Host do
-    IdentityFile ~/.ssh/ssh
-    User destro
-    Hostname 104.131.171.36
-
-# HPC
-Host hpc
-    IdentityFile ~/.ssh/ssh
-    User vsc42469
-    Hostname login.hpc.ugent.be
 
 # Haldis
 Host haldis
@@ -38,18 +31,41 @@ Host bottlebats
    User bottlebats
    Hostname zeus.ugent.be
 
-# GitHub
-Host github.com
-    HostName github.com
-    IdentityFile ~/.ssh/git_standard
-    User git
-
 # Hydra
 Host hydra
     IdentityFile ~/.ssh/ssh
     User hydra
     Port 2222
     Hostname zeus.ugent.be
+
+Host blok
+    IdentityFile ~/.ssh/ssh
+    User blok
+    Port 2222
+    HostName zeus.ugent.be
+
+Host 12urenloop
+    IdentityFile ~/.ssh/ssh
+    User urenloop
+    Port 2222
+    HostName zeus.ugent.be
+
+# Default fallback
+Host zeus.ugent.be
+    IdentityFile ~/.ssh/ssh
+    Port 2222
+    User destro
+    Hostname zeus.ugent.be
+
+#-------------------------------------------------------------------------------
+# Version Control
+#-------------------------------------------------------------------------------
+
+# GitHub
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/git_standard
+    User git
 
 # UGent GitHub
 Host github.ugent.be
@@ -59,9 +75,30 @@ Host github.ugent.be
 
 # IDLab GitLab
 Host git.datasciencelab.ugent.be
-   HostName git.datasciencelab.ugent.be
-   IdentityFile ~/.ssh/git_standard
-   User git
+    HostName git.datasciencelab.ugent.be
+    IdentityFile ~/.ssh/git_standard
+    User git
+
+# Zeus gitlab
+Host git.zeus.gent
+    HostName git.zeus.gent
+    IdentityFile ~/.ssh/git_standard
+    User git
+
+Host gitlab.com
+    Hostname gitlab.com
+    IdentityFile ~/.ssh/ssh
+    User git
+
+#-------------------------------------------------------------------------------
+# UGent
+#-------------------------------------------------------------------------------
+
+# HPC
+Host hpc
+    IdentityFile ~/.ssh/ssh
+    User vsc42469
+    Hostname login.hpc.ugent.be
 
 # VOP
 Host vop
@@ -74,4 +111,23 @@ Host vop
 Host itech
     HostName 193.190.127.173
     User groep34
-    IdentityFile ~/.ssh/ssh    
+    IdentityFile ~/.ssh/ssh
+
+# Subgit
+Host subgit.ugent.be
+    HostName subgit.ugent.be
+    User git
+    IdentityFile ~/.ssh/git_ugent
+
+#-------------------------------------------------------------------------------
+# Varia
+#-------------------------------------------------------------------------------
+
+# DigitalOcean Droplet
+Host do
+    IdentityFile ~/.ssh/ssh
+    User destro
+    Hostname 104.131.171.36
+
+Host *
+    AddKeysToAgent yes

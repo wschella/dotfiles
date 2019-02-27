@@ -1,6 +1,12 @@
 directory: /media/wout/Data/Music/Library/
-library: /media/wout/Data/Music/Resources/library.db
+library: /media/wout/Data/Music/Meta/library.db
 plugins: fetchart inline lyrics fromfilename
+# Set this when importing lot's of single tracks (preferably already tagged)
+match:
+    distance_weights:
+        missing_tracks: 0.1
+import:
+    move: yes
 paths:
     default: $albumartist/[$original_year] $album%aunique{}%ifdef{tags, [$tags]}/$track - $title
     singleton: $albumartist/Non-Album/[$original_year] $title
