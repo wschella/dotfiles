@@ -4,61 +4,41 @@
 
 # Gamification
 Host game
-    ForwardAgent yes
-    IdentityFile ~/.ssh/ssh
     User gamification
     Port 2222
     Hostname zeus.ugent.be
 
 # Haldis
 Host haldis
-    IdentityFile ~/.ssh/ssh
     Port 2222
     User haldis
-    Hostname zeus.ugent.be
-
-# MOZAIC
-Host mozaic
-    IdentityFile ~/.ssh/ssh
-    Port 2222
-    User mozaic
-    Hostname zeus.ugent.be
-
-# Bottlebats
-Host bottlebats
-   IdentityFile ~/.ssh/ssh
-   Port 2222
-   User bottlebats
-   Hostname zeus.ugent.be
+    Hostname herbert.ugent.be
 
 # Hydra
 Host hydra
-    IdentityFile ~/.ssh/ssh
     User hydra
     Port 2222
     Hostname zeus.ugent.be
 
+# Blokmap
 Host blok
-    IdentityFile ~/.ssh/ssh
     User blok
     Port 2222
-    HostName zeus.ugent.be
+    HostName herbert.ugent.be
 
+# 12urenloop
 Host 12urenloop
-    IdentityFile ~/.ssh/ssh
     User urenloop
     Port 2222
     HostName zeus.ugent.be
 
 Host boxxy
-    IdentityFile ~/.ssh/ssh
     User urenloop
     Port 2222
     HostName zeus.ugent.be
 
 # Default fallback
 Host zeus.ugent.be
-    IdentityFile ~/.ssh/ssh
     Port 2222
     User destro
     Hostname zeus.ugent.be
@@ -70,30 +50,25 @@ Host zeus.ugent.be
 # GitHub
 Host github.com
     HostName github.com
-    IdentityFile ~/.ssh/git_standard
     User git
 
 # UGent GitHub
 Host github.ugent.be
     HostName github.ugent.be
-    IdentityFile ~/.ssh/git_ugent
     User git
 
 # IDLab GitLab
-Host git.datasciencelab.ugent.be
-    HostName git.datasciencelab.ugent.be
-    IdentityFile ~/.ssh/git_standard
+Host gitlab.ilabt.imec.be
+    HostName gitlab.ilabt.imec.be
     User git
 
 # Zeus gitlab
 Host git.zeus.gent
     HostName git.zeus.gent
-    IdentityFile ~/.ssh/git_standard
     User git
 
 Host gitlab.com
     Hostname gitlab.com
-    IdentityFile ~/.ssh/ssh
     User git
 
 #-------------------------------------------------------------------------------
@@ -106,24 +81,10 @@ Host hpc
     User vsc42469
     Hostname login.hpc.ugent.be
 
-# VOP
-Host vop
-    HostName vopro2.ugent.be
-    IdentityFile ~/.ssh/git_ugent
-    User admin
-    Port 2002
-
-# ITech
-Host itech
-    HostName 193.190.127.173
-    User groep34
-    IdentityFile ~/.ssh/ssh
-
 # Subgit
 Host subgit.ugent.be
     HostName subgit.ugent.be
     User git
-    IdentityFile ~/.ssh/git_ugent
 
 #-------------------------------------------------------------------------------
 # Varia
