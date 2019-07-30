@@ -18,6 +18,9 @@ alias g="git"
 alias coqide='export OPAMROOT=~/opam-coq.8.8.1; eval $(opam config env); coqide&
 '
 
+alias c="xclip -selection clipboard"
+alias v="xclip -o -selection clipboard"
+
 # https://lelutin.ca/posts/Using_password-store_with_an_alternate_directory/
 alias zpass='PASSWORD_STORE_DIR=~/.zeus-wachtwoord-winkel pass'
 
