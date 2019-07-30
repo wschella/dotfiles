@@ -2,10 +2,12 @@
 config = "~/.config"
 ssh = "~/.ssh"
 
-bash_aliases = "~/.bash_aliases"
-bash_prompt = "~/.bash_prompt"
-bashrc = "~/.bashrc"
-bashrc_default = "~/.bashrc_default"
+"bash_aliases.sh" = "~/.bash_aliases"
+"bash_prompt.sh" = "~/.bash_prompt"
+"bashrc.sh" = "~/.bashrc"
+"bashrc_default.sh" = "~/.bashrc_default"
+"zpass.bash-completion.sh" = "~/.zpass.bash-completion"
+
 gitconfig = "~/.gitconfig"
 gitignore = "~/.gitignore"
 inputrc = "~/.inputrc"
