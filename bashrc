@@ -35,10 +35,33 @@ fi
 #------------------------------------------------------------------------------
 # Path / CD tweaks
 #------------------------------------------------------------------------------
-shopt -s cdspell # Correct small typo's
-# complete -d cd # Complete only directories
+# Correct small typo's
+shopt -s cdspell 
+
+# Complete only directories
+# complete -d cd
+
 shopt -s cdable_vars
+
+# I like these dirs
 export CDPATH=":/media/wout/Data/Workspace:/media/wout/Data"
+
+# Local
 export PATH="$PATH:$HOME/.local/bin"
+
+# Fix yarn
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Fix rbenv
 eval "$(rbenv init -)"
+
+# Add julia to Path
+export PATH="$PATH:/opt/julia/bin"
+
+# Add spark to Path
+SPARK_HOME=/usr/local/spark
+export PATH="$PATH:$SPARK_HOME/bin"
+
+# Set the Hadoop Related Environment variables
+export HADOOP_HOME="/usr/local/hadoop"
+export PATH="$PATH:$HADOOP_HOME/bin"

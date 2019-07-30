@@ -140,5 +140,5 @@ _pass()
 		_pass_complete_entries 1
 	fi
 }
-
+_pass_complete_entries
 complete -o filenames -F _pass zpass

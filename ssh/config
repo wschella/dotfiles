@@ -50,6 +50,12 @@ Host 12urenloop
     Port 2222
     HostName zeus.ugent.be
 
+Host boxxy
+    IdentityFile ~/.ssh/ssh
+    User urenloop
+    Port 2222
+    HostName zeus.ugent.be
+
 # Default fallback
 Host zeus.ugent.be
     IdentityFile ~/.ssh/ssh
