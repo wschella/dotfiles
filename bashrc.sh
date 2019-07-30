@@ -18,10 +18,6 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-if [ -f $HOME/.zpass.bash_completion ]; then
-    . $HOME/.zpass.bash_completion
-fi
-
 if [ -f $HOME/.bash_aliases ]; then
     . $HOME/.bash_aliases
 fi
