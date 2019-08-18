@@ -37,6 +37,12 @@ Host boxxy
     Port 2222
     HostName zeus.ugent.be
 
+# Auth stuff
+Host adams
+    User root
+    Port 2222
+    HostName adams.ugent.be
+
 # Default fallback
 Host zeus.ugent.be
     Port 2222
