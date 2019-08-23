@@ -22,9 +22,7 @@ if [ -f $HOME/.bash_aliases ]; then
     . $HOME/.bash_aliases
 fi
 
-if [ -f $HOME/.bash_prompt ]; then
-    . $HOME/.bash_prompt
-fi
+eval "$(starship init bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
