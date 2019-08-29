@@ -57,11 +57,3 @@ eval "$(rbenv init -)"
 
 # Add julia to Path
 export PATH="$PATH:/opt/julia/bin"
-
-# Add spark to Path
-SPARK_HOME=/usr/local/spark
-export PATH="$PATH:$SPARK_HOME/bin"
-
-# Set the Hadoop Related Environment variables
-export HADOOP_HOME="/usr/local/hadoop"
-export PATH="$PATH:$HADOOP_HOME/bin"
