@@ -7,6 +7,9 @@ alias latexwatch="latexmk -synctex=1 -interaction=nonstopmode -file-line-error -
 
 alias rebash="dotter -d ~/.dotfiles deploy && source ~/.bashrc"
 
+alias mirror="wget --mirror --convert-links --adjust-extension --page-requisites 
+--no-parent"
+
 # Version control
 alias gti="git"
 alias g="git"

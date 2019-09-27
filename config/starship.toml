@@ -1,2 +1,22 @@
+[hostname]
+ssh_only = false
+suffix = ""
+disabled = false
+
+[username]
+show_always = true
+
+[git_status]
+show_sync_count = true
+
 [directory]
 truncate_to_repo = false
+
+[rust]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
