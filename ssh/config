@@ -6,19 +6,19 @@
 Host game
     User gamification
     Port 2222
-    Hostname zeus.ugent.be
+    HostName zeus.ugent.be
 
 # Haldis
 Host haldis
     Port 2222
     User haldis
-    Hostname herbert.ugent.be
+    HostName herbert.ugent.be
 
 # Hydra
 Host hydra
     User hydra
     Port 2222
-    Hostname zeus.ugent.be
+    HostName zeus.ugent.be
 
 # Blokmap
 Host blok
@@ -47,7 +47,7 @@ Host adams
 Host zeus.ugent.be
     Port 2222
     User destro
-    Hostname zeus.ugent.be
+    HostName zeus.ugent.be
 
 #-------------------------------------------------------------------------------
 # Version Control
@@ -74,7 +74,7 @@ Host git.zeus.gent
     User git
 
 Host gitlab.com
-    Hostname gitlab.com
+    HostName gitlab.com
     User git
 
 #-------------------------------------------------------------------------------
@@ -83,9 +83,8 @@ Host gitlab.com
 
 # HPC
 Host hpc
-    IdentityFile ~/.ssh/ssh
     User vsc42469
-    Hostname login.hpc.ugent.be
+    HostName login.hpc.ugent.be
 
 # Subgit
 Host subgit.ugent.be
@@ -96,9 +95,23 @@ Host subgit.ugent.be
 # Varia
 #-------------------------------------------------------------------------------
 
+# DSA
+Host ballanti
+    User wout
+    HostName ballanti.ugent.be
+
+Host teeling
+    User wout
+    HostName teeling.ugent.be
+
+Host student
+    User dsaadmin
+    HostName student.ugent.be
+
+
+
 # DigitalOcean Droplet
 Host do
-    IdentityFile ~/.ssh/ssh
     User destro
     Hostname 104.131.171.36
 
