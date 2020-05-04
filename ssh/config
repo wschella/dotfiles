@@ -99,14 +99,17 @@ Host subgit.ugent.be
 Host ballanti
     User wout
     HostName ballanti.ugent.be
+    Port 2222
 
 Host teeling
     User wout
     HostName teeling.ugent.be
+    Port 2222
 
 Host student
     User dsaadmin
     HostName student.ugent.be
+    Port 2222
 
 
 

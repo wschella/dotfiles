@@ -41,13 +41,12 @@ shopt -s cdspell
 # Complete only directories
 # complete -d cd
 
+export PIPENV_VENV_IN_PROJECT=1
+
 shopt -s cdable_vars
 
 # I like these dirs
 export CDPATH=":/media/wout/Data/Workspace:/media/wout/Data"
-
-# Local
-export PATH="$PATH:$HOME/.local/bin"
 
 # Fix yarn
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -55,5 +54,21 @@ export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Fix rbenv
 eval "$(rbenv init -)"
 
+# Add cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Add poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
 # Add julia to Path
 export PATH="$PATH:/opt/julia/bin"
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    export PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
