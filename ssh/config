@@ -101,6 +101,11 @@ Host ballanti
     HostName ballanti.ugent.be
     Port 2222
 
+Host backend.dsa.ugent.be
+    User dsa_website
+    HostName backend.dsa.ugent.be
+    Port 2222
+
 Host teeling
     User wout
     HostName teeling.ugent.be
