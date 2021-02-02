@@ -116,12 +116,10 @@ Host student
     HostName student.ugent.be
     Port 2222
 
-
-
-# DigitalOcean Droplet
-Host do
-    User destro
-    Hostname 104.131.171.36
+Host errink
+    User root
+    HostName 116.203.110.163
 
 Host *
     AddKeysToAgent yes
+    ForwardAgent no
