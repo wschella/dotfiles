@@ -51,9 +51,6 @@ export CDPATH=":/media/wout/Data/Workspace:/media/wout/Data"
 # Fix yarn
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# Fix rbenv
-eval "$(rbenv init -)"
-
 # Add cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -71,4 +68,9 @@ fi
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Source Nix config & tools
+if [ -f "/etc/profile.d/nix.sh" ] ; then
+    source "/etc/profile.d/nix.sh"
 fi
