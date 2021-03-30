@@ -1,0 +1,31 @@
+[beets.files]
+"config/beets" = "~/.config/beets"
+
+[inkscape.files]
+"config/inkscape" = "~/.config/inkscape"
+
+[bash.files]
+"bashrc.sh"          = "~/.bashrc"
+"bashrc_default.sh"  = "~/.bashrc_default"
+"bash_aliases.sh"    = "~/.bash_aliases"
+"bash_completion.sh" = "~/.bash_completion"
+
+[ssh.files]
+ssh = "~/.ssh"
+
+[git.files]
+"git/gitconfig" = "~/.gitconfig"
+"git/gitignore" = "~/.gitignore"
+
+[mozilla.files]
+"mozilla/MaterialFox/chrome" = "~/.mozilla/firefox/vlfr4wgj.default/chrome"
+
+[python.files]
+"config/pep8" = "~/.config/pep8"
+pylintrc      = "~/.pylintrc"
+
+[system.files]
+inputrc = "~/.inputrc"
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"

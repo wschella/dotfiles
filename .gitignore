@@ -1,1 +1,3 @@
-dotter_cache
+.dotter/local.toml
+.dotter/cache
+.dotter/cache.toml

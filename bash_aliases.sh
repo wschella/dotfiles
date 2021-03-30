@@ -5,7 +5,7 @@ alias l="ls -ahGl --color=auto"
 
 alias latexwatch="latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pvc -pdf"
 
-alias rebash="dotter -d ~/.dotfiles deploy && source ~/.bashrc"
+alias rebash="dotter -g ~/.dotfiles/.dotter/global.toml deploy && source ~/.bashrc"
 
 alias mirror="wget --mirror --convert-links --adjust-extension --page-requisites 
 --no-parent"
