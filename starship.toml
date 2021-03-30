@@ -3,6 +3,9 @@ ssh_only = false
 # suffix = ""
 disabled = false
 
+[status]
+disabled = false
+
 [username]
 show_always = true
 
