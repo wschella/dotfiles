@@ -3,6 +3,8 @@ alias fuck="sudo $(fc -ln -1)"
 alias please="sudo $(fc -ln -1)"
 alias l="ls -ahGl --color=auto"
 
+alias sshpub="cat ~/.ssh/id_rsa.pub | c"
+
 alias latexwatch="latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pvc -pdf"
 
 alias rebash="dotter -g ~/.dotfiles/.dotter/global.toml deploy && source ~/.bashrc"
