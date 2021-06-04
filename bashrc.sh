@@ -64,3 +64,7 @@ fi
 if [ -f "/etc/profile.d/nix.sh" ] ; then
     source "/etc/profile.d/nix.sh"
 fi
+
+# This is usefull on multi user installations 
+# https://github.com/NixOS/nix/issues/2033
+export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
