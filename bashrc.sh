@@ -18,10 +18,9 @@ if [ -f $HOME/.bash_aliases ]; then
     . $HOME/.bash_aliases
 fi
 
-# Prompt
-eval "$(starship init bash)"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if [ -f $HOME/.bash_prompt ]; then
+    . $HOME/.bash_prompt
+fi
 
 #------------------------------------------------------------------------------
 # Path / CD tweaks

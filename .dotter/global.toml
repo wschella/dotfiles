@@ -8,7 +8,9 @@
 "bashrc.sh"          = "~/.bashrc"
 "bashrc_default.sh"  = "~/.bashrc_default"
 "bash_aliases.sh"    = "~/.bash_aliases"
-"bash_completion.sh" = "~/.bash_completion"
+
+[bash_prompt.files]
+"bash_prompt.sh" = "~/.bash_prompt"
 
 [ssh.files]
 ssh = "~/.ssh"
