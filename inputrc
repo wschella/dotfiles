@@ -2,8 +2,11 @@ $include /etc/inputrc
 
 # https://tiswww.case.edu/php/chet/readline/rluserman.html#SEC9
 
-set show-all-if-ambiguous on # single tab autocomplete
-set bell-style none # disable bell
+# single tab autocomplete
+set show-all-if-ambiguous on
+
+# disable bell
+set bell-style none 
 
 set colored-stats on
 set colored-completion-prefix on

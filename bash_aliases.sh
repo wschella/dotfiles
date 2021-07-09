@@ -32,3 +32,5 @@ alias zpass='PASSWORD_STORE_DIR=~/.zeus-wachtwoord-winkel pass'
 # Programming environements
 alias java8="/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar"
 alias nanocl="bundle exec nanoc live"
+alias pure="nix-shell --pure"
+alias ns="nix-shell"
