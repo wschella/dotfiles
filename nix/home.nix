@@ -28,5 +28,9 @@
     pkgs.nixfmt
     pkgs.fzf
     pkgs.conda
+    
+    # for fzf errors
+    # https://github.com/NixOS/nixpkgs/issues/8398#issuecomment-186832814
+    pkgs.glibcLocales
   ];
 }

@@ -65,6 +65,13 @@ if [ -f "/etc/profile.d/nix.sh" ] ; then
     source "/etc/profile.d/nix.sh"
 fi
 
+# fzf on Nix
+export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"
+if command -v fzf-share >/dev/null; then
+    source "$(fzf-share)/key-bindings.bash"
+    source "$(fzf-share)/completion.bash"
+fi
+
 # This is usefull on multi user installations 
 # https://github.com/NixOS/nix/issues/2033
 export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
