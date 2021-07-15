@@ -7,8 +7,9 @@ alias sshpub="cat ~/.ssh/id_rsa.pub | c"
 
 alias latexwatch="latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pvc -pdf"
 
-alias rebash="dotter -g ~/.dotfiles/.dotter/global.toml deploy && source ~/.bashrc"
-alias renix="rebash; home-manager switch"
+alias redotter="(cd ~/.dotfiles/ && dotter deploy)"
+alias rebash="redotter  && source ~/.bashrc"
+alias renix="rebash && home-manager switch"
 
 alias mirror="wget --mirror --convert-links --adjust-extension --page-requisites 
 --no-parent"
