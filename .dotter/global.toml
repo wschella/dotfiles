@@ -31,3 +31,6 @@ inputrc = "~/.inputrc"
 
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
+
+[nix-home.files]
+"nix/home.nix" = "~/.config/nixpkgs/home.nix"
