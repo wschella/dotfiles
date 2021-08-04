@@ -24,10 +24,13 @@
     pkgs.htop
     pkgs.vim
     pkgs.git 
+    pkgs.which
     pkgs.iproute2
     pkgs.nixfmt
     pkgs.fzf
-    pkgs.conda
+    pkgs.ncdu
+    pkgs.screen
+    pkgs.tldr
     
     # for fzf errors
     # https://github.com/NixOS/nixpkgs/issues/8398#issuecomment-186832814
