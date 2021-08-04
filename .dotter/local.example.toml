@@ -1,1 +1,1 @@
-packages = ["bash", "git", "python", "starship"]
+packages = ["shell", "git", "python"]

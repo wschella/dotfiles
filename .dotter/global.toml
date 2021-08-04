@@ -4,13 +4,15 @@
 [inkscape.files]
 "config/inkscape" = "~/.config/inkscape"
 
-[bash.files]
+[shell.files]
 "bashrc.sh"          = "~/.bashrc"
 "bashrc_default.sh"  = "~/.bashrc_default"
 "bash_aliases.sh"    = "~/.bash_aliases"
+"inputrc"            = "~/.inputrc"
 
-[bash_prompt.files]
+[shell_prompt.files]
 "bash_prompt.sh" = "~/.bash_prompt"
+"starship.toml" = "~/.config/starship.toml"
 
 [ssh.files]
 ssh = "~/.ssh"
@@ -26,11 +28,6 @@ ssh = "~/.ssh"
 "config/pep8" = "~/.config/pep8"
 pylintrc      = "~/.pylintrc"
 
-[system.files]
-inputrc = "~/.inputrc"
-
-[starship.files]
-"starship.toml" = "~/.config/starship.toml"
 
 [nix-home.files]
 "nix/home.nix" = "~/.config/nixpkgs/home.nix"
