@@ -22,6 +22,8 @@
   ui = auto
 
 [alias]
+  r = rebase
+  rcont = rebase --continue
   br = branch
   ci = commit
   co = checkout 
