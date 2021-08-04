@@ -49,9 +49,6 @@ export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Add cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Add poetry
-export PATH="$HOME/.poetry/bin:$PATH"
-
 # Add julia to Path
 export PATH="$PATH:/opt/julia/bin"
 
