@@ -2,4 +2,4 @@
 .dotter/cache
 .dotter/cache.toml
 
-bash_local.sh
+modules/shell/bash_local.sh

@@ -10,6 +10,9 @@
 "modules/shell/bash_aliases.sh"   = "~/.bash_aliases"
 "modules/shell/inputrc"           = "~/.inputrc"
 
+[shell_local.files]
+"modules/shell/bash_local.sh" = "~/.bash_local"
+
 [shell_prompt.files]
 "modules/shell/bash_prompt.sh" = "~/.bash_prompt"
 "modules/shell/starship.toml"  = "~/.config/starship.toml"
