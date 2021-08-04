@@ -1,30 +1,29 @@
 [beets.files]
-"config/beets" = "~/.config/beets"
+"modules/beets" = "~/.config/beets"
 
 [inkscape.files]
-"config/inkscape" = "~/.config/inkscape"
+"modules/inkscape" = "~/.config/inkscape"
 
 [shell.files]
-"shell/bashrc.sh"         = "~/.bashrc"
-"shell/bashrc_default.sh" = "~/.bashrc_default"
-"shell/bash_aliases.sh"   = "~/.bash_aliases"
-"shell/inputrc"           = "~/.inputrc"
+"modules/shell/bashrc.sh"         = "~/.bashrc"
+"modules/shell/bashrc_default.sh" = "~/.bashrc_default"
+"modules/shell/bash_aliases.sh"   = "~/.bash_aliases"
+"modules/shell/inputrc"           = "~/.inputrc"
 
 [shell_prompt.files]
-"shell/bash_prompt.sh" = "~/.bash_prompt"
-"shell/starship.toml"  = "~/.config/starship.toml"
+"modules/shell/bash_prompt.sh" = "~/.bash_prompt"
+"modules/shell/starship.toml"  = "~/.config/starship.toml"
 
 [ssh.files]
-ssh = "~/.ssh"
+"modules/ssh" = "~/.ssh"
 
 [git.files]
-"git/gitconfig" = "~/.gitconfig"
-"git/gitignore" = "~/.gitignore"
+"modules/git/gitconfig" = "~/.gitconfig"
+"modules/git/gitignore" = "~/.gitignore"
 
 [python.files]
-"config/pep8" = "~/.config/pep8"
-pylintrc      = "~/.pylintrc"
-
+"modules/python/pep8"     = "~/.config/pep8"
+"modules/python/pylintrc" = "~/.pylintrc"
 
 [nix-home.files]
-"nix/home.nix" = "~/.config/nixpkgs/home.nix"
+"modules/nix-home/home.nix" = "~/.config/nixpkgs/home.nix"
