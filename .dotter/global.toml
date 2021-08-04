@@ -5,14 +5,14 @@
 "config/inkscape" = "~/.config/inkscape"
 
 [shell.files]
-"bashrc.sh"         = "~/.bashrc"
-"bashrc_default.sh" = "~/.bashrc_default"
-"bash_aliases.sh"   = "~/.bash_aliases"
-"inputrc"           = "~/.inputrc"
+"shell/bashrc.sh"         = "~/.bashrc"
+"shell/bashrc_default.sh" = "~/.bashrc_default"
+"shell/bash_aliases.sh"   = "~/.bash_aliases"
+"shell/inputrc"           = "~/.inputrc"
 
 [shell_prompt.files]
-"bash_prompt.sh" = "~/.bash_prompt"
-"starship.toml"  = "~/.config/starship.toml"
+"shell/bash_prompt.sh" = "~/.bash_prompt"
+"shell/starship.toml"  = "~/.config/starship.toml"
 
 [ssh.files]
 ssh = "~/.ssh"
