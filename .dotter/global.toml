@@ -5,14 +5,14 @@
 "config/inkscape" = "~/.config/inkscape"
 
 [shell.files]
-"bashrc.sh"          = "~/.bashrc"
-"bashrc_default.sh"  = "~/.bashrc_default"
-"bash_aliases.sh"    = "~/.bash_aliases"
-"inputrc"            = "~/.inputrc"
+"bashrc.sh"         = "~/.bashrc"
+"bashrc_default.sh" = "~/.bashrc_default"
+"bash_aliases.sh"   = "~/.bash_aliases"
+"inputrc"           = "~/.inputrc"
 
 [shell_prompt.files]
 "bash_prompt.sh" = "~/.bash_prompt"
-"starship.toml" = "~/.config/starship.toml"
+"starship.toml"  = "~/.config/starship.toml"
 
 [ssh.files]
 ssh = "~/.ssh"
@@ -20,9 +20,6 @@ ssh = "~/.ssh"
 [git.files]
 "git/gitconfig" = "~/.gitconfig"
 "git/gitignore" = "~/.gitignore"
-
-[mozilla.files]
-"mozilla/MaterialFox/chrome" = "~/.mozilla/firefox/vlfr4wgj.default/chrome"
 
 [python.files]
 "config/pep8" = "~/.config/pep8"
