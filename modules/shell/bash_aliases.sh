@@ -9,7 +9,8 @@ alias latexwatch="latexmk -synctex=1 -interaction=nonstopmode -file-line-error -
 
 alias redotter="(cd ~/.dotfiles/ && dotter deploy)"
 alias rebash="redotter  && source ~/.bashrc"
-alias renix="rebash && home-manager switch"
+alias rehome="rebash && home-manager switch"
+alias renix="nixos-rebuild switch"
 
 alias mirror="wget --mirror --convert-links --adjust-extension --page-requisites 
 --no-parent"
