@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./nextcloud.nix
       (fetchTarball "https://github.com/msteen/nixos-vscode-server/tarball/master")
     ];
 
@@ -24,8 +25,28 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.enp1s0.useDHCP = true;
-  networking.firewall.allowedTCPPorts = [ ];
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
   networking.firewall.allowedUDPPorts = [ ];
+  services.nginx = {
+    enable = true;
+    recommendedGzipSettings = true;
+    recommendedOptimisation = true;
+    recommendedProxySettings = true;
+    recommendedTlsSettings = true;
+
+    # Setup Nextcloud virtual host to listen on ports
+    virtualHosts = {
+      "nxt.schellaert.org" = {
+        forceSSL = true;
+        enableACME = true;
+      };
+    };
+  };
+
+  security.acme = {
+    acceptTerms = true;
+    email = "wout.schellaert@gmail.com";
+  };
 
   services.vscode-server.enable = true;
 
