@@ -7,7 +7,7 @@
 
     # Use HTTPS for links
     https = true;
-    
+
     # Auto-update Nextcloud Apps
     autoUpdateApps.enable = true;
     # Set what time makes sense for you
@@ -39,6 +39,16 @@
        ensurePermissions."DATABASE nextcloud" = "ALL PRIVILEGES";
      }
     ];
+  };
+  
+  fileSystems."/mnt/storagebox" = {
+      device = "//u275045.your-storagebox.de/backup";
+      fsType = "cifs";
+      options = let
+        # this line prevents hanging on network split
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+        permission_opts = "uid=997,gid=998";
+      in ["${automount_opts},${permission_opts},credentials=/etc/nixos/smb-secrets"];
   };
 
   systemd.services."nextcloud-setup" = {
