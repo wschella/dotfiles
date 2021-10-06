@@ -8,6 +8,7 @@
       (fetchTarball "https://github.com/msteen/nixos-vscode-server/tarball/master")
   ];
 
+  networking.hostName = "errink";
   time.timeZone = "Europe/Brussels";
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
@@ -18,7 +19,6 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.ens3.useDHCP = true;
-  networking.hostName = "errink";
   networking.firewall.allowedTCPPorts = [ 80 443 ];
   networking.firewall.allowedUDPPorts = [ ];
   services.nginx = {
