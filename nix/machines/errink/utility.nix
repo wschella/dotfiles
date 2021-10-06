@@ -4,6 +4,9 @@
       (fetchTarball "https://github.com/msteen/nixos-vscode-server/tarball/master")
   ];
 
+  users.defaultUserShell = pkgs.bash;
+  programs.bash.shellInit = ''source ~/.bashrc'';
+
   environment.systemPackages = with pkgs; [ 
     wget 
     vim
