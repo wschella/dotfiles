@@ -1,11 +1,9 @@
 { config, pkgs, ... }:
-
 {
-  imports =  [
-      ./hardware-configuration.nix
-      ./nextcloud.nix
-      ./utility.nix
-      (fetchTarball "https://github.com/msteen/nixos-vscode-server/tarball/master")
+  imports = [
+    ./hardware-configuration.nix
+    ./nextcloud.nix
+    ./utility.nix
   ];
 
   networking.hostName = "errink";

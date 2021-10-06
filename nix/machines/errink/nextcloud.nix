@@ -4,6 +4,7 @@
   services.nextcloud = {
     enable = true;
     hostName = "nxt.schellaert.org";
+    package = pkgs.nextcloud22;
     config.extraTrustedDomains = [ "116.203.110.163" ];
 
     # Use HTTPS for links
