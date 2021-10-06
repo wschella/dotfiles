@@ -12,6 +12,9 @@ alias rebash="redotter  && source ~/.bashrc"
 alias rehome="rebash && home-manager switch"
 alias renix="nixos-rebuild switch"
 
+alias vinix="vim /etc/nixos/configuration.nix"
+alias occ="nextcloud-occ"
+
 alias mirror="wget --mirror --convert-links --adjust-extension --page-requisites 
 --no-parent"
 
