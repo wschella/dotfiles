@@ -18,11 +18,16 @@
     fzf
     which
     ncdu
+    starship
 
     # Rust
     cargo
     rustc
-    gcc
+    gcc # https://github.com/mozilla/nixpkgs-mozilla/issues/82
+
+    # for fzf errors
+    # https://github.com/NixOS/nixpkgs/issues/8398#issuecomment-186832814
+    glibcLocales
   ];
   services.vscode-server.enable = true;
 }

@@ -67,8 +67,13 @@ if [ -f "/etc/profile.d/nix.sh" ] ; then
     source "/etc/profile.d/nix.sh"
 fi
 
-# fzf on Nix
-export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"
+if [ -d "/nix" ] ; then
+    export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"
+fi
+if [ -d "/etc/nixos" ] ; then
+    export LOCALE_ARCHIVE="/run/current-system/sw/lib/locale/locale-archive"
+fi
+
 if command -v fzf-share >/dev/null; then
     source "$(fzf-share)/key-bindings.bash"
     source "$(fzf-share)/completion.bash"

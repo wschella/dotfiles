@@ -31,6 +31,7 @@
     pkgs.ncdu
     pkgs.screen
     pkgs.tldr
+    pkgs.starship
     
     # for fzf errors
     # https://github.com/NixOS/nixpkgs/issues/8398#issuecomment-186832814

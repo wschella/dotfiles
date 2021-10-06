@@ -7,6 +7,7 @@
   ];
 
   networking.hostName = "errink";
+  i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Brussels";
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
