@@ -16,6 +16,8 @@ Host brella
 Host falco
     User wout
     ForwardAgent yes
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
     HostName falco.dsic.upv.es
 
 Host dmip@falco
