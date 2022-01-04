@@ -30,3 +30,6 @@
 
 [nix-home.files]
 "modules/nix-home/home.nix" = "~/.config/nixpkgs/home.nix"
+
+[espanso.files]
+"modules/espanso" = { target = "~/.config/espanso", type = "symbolic" }
