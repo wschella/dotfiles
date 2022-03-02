@@ -2,17 +2,33 @@ name: emails
 parent: default
 
 matches:
-  - trigger: "::gmail"
+  - trigger: ":gmail"
     replace: "wout.schellaert@gmail.com"
-  - trigger: "::mail"
+  - trigger: ":mail"
     replace: "wout@schellaert.org"
-  - trigger: "::phone be"
+  - trigger: ":upvmail"
+    replace: "wschell@vrain.upv.es"
+
+  - trigger: ":phone be"
     replace: "0472603788"
-  - trigger: "::phone es"
+  - trigger: ":phone es"
     replace: "603675984"
-  - trigger: "::iban be"
+
+  - trigger: ":iban be"
     replace: "BE04891434115931"
-  - trigger: "::iban es"
+  - trigger: ":iban es"
     replace: "ES7400491736792610084091"
-  - trigger: "::nie"
+  - trigger: ":visa"
+    replace: "5163 8303 6410 0042"
+
+  - trigger: ":nie"
     replace: "Y8676496J"
+
+  - trigger: ":rrnf"
+    replace: "96.06.17-241.46"
+  - trigger: ":rrnu"
+    replace: "96061724146"
+  - trigger: ":id"
+    replace: "592-1131216-83"
+  - trigger: ":isa id"
+    replace: "591-9026729-11"
