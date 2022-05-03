@@ -29,7 +29,7 @@ alias ip6="ip -c -br -6 a"
 
 # Conda
 alias condcre="conda env create --prefix .env -f environment.yml"
-alias condupt="conda env update --prefix ./env --file environment.yml  --prune"
+alias condupt="conda env update --prefix .env --file environment.yml  --prune"
 alias condact="conda activate ./.env"
 alias conddact="conda deactivate"
 
