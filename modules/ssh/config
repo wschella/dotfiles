@@ -2,13 +2,26 @@
 # Personal
 #-------------------------------------------------------------------------------
 
+Host lokaalbeslist.be
+    HostName lokaalbeslist.be
+    User root
+
+Host lokaalbeslist
+    HostName lokaalbeslist
+
 Host errink
     User root
     HostName 116.203.110.163
 
 Host brella
-    User root
-    HostName 49.12.204.33
+    User u275045
+    Port 23
+    HostName u275045.your-storagebox.de
+
+Host jackt
+    User u293138
+    Port 23
+    HostName u293138.your-storagebox.de
 
 #-------------------------------------------------------------------------------
 # UPV
@@ -145,6 +158,11 @@ Host student
 #-------------------------------------------------------------------------------
 # Varia
 #-------------------------------------------------------------------------------
+
+Host lb
+    User root
+    HostName lokaalbeslist.be
+    Port 22
 
 Host *
     AddKeysToAgent yes

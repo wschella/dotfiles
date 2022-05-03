@@ -42,7 +42,7 @@
      }
     ];
   };
-  
+
   fileSystems."/mnt/storagebox-brella" = {
       device = "//u275045.your-storagebox.de/backup";
       fsType = "cifs";
