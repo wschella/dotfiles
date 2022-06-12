@@ -20,6 +20,7 @@
   networking.interfaces.ens3.useDHCP = true;
   networking.firewall.allowedTCPPorts = [ 80 443 ];
   networking.firewall.allowedUDPPorts = [ ];
+  # https://nixos.wiki/wiki/Nginx
   services.nginx = {
     enable = true;
     recommendedGzipSettings = true;
@@ -28,6 +29,7 @@
     recommendedTlsSettings = true;
 
     # Setup Nextcloud virtual host to listen on ports
+    # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-servers/nginx/vhost-options.nix
     virtualHosts = {
       "nxt.schellaert.org" = {
         forceSSL = true;
@@ -38,6 +40,15 @@
         addSSL = true;
         enableACME = true;
         root = "/var/www/schellaert.org";
+        locations = {
+          "/" = {
+            # defaultType = "text/html";
+            tryFiles = "$uri $uri.html $uri/index.html index.html";
+          };
+        };
+        extraConfig = ''
+          error_page 404 /404.html;
+        '';
       };
     };
 
