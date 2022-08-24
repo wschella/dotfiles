@@ -4,7 +4,7 @@
   services.nextcloud = {
     enable = true;
     hostName = "nxt.schellaert.org";
-    package = pkgs.nextcloud22;
+    package = pkgs.nextcloud24;
     config.extraTrustedDomains = [ "116.203.110.163" ];
 
     # Use HTTPS for links
@@ -28,6 +28,8 @@
 
       adminpassFile = "/var/nextcloud-admin-pass";
       adminuser = "admin";
+
+      defaultPhoneRegion = "BE";
     };
   };
 
