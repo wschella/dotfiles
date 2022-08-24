@@ -31,24 +31,24 @@
     # Setup Nextcloud virtual host to listen on ports
     # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-servers/nginx/vhost-options.nix
     virtualHosts = {
-      "nxt.schellaert.org" = {
-        forceSSL = true;
-        enableACME = true;
-      };
-
       "schellaert.org" = {
         addSSL = true;
         enableACME = true;
+        default = true;
         root = "/var/www/schellaert.org";
         locations = {
           "/" = {
-            # defaultType = "text/html";
             tryFiles = "$uri $uri.html $uri/index.html index.html";
           };
         };
         extraConfig = ''
           error_page 404 /404.html;
         '';
+      };
+
+      "nxt.schellaert.org" = {
+        forceSSL = true;
+        enableACME = true;
       };
     };
 
