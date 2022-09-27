@@ -28,6 +28,9 @@
 "modules/python/pep8"     = "~/.config/pep8"
 "modules/python/pylintrc" = "~/.pylintrc"
 
+[nixos-home.files]
+"modules/nixos-home/home.nix" = "~/.config/nixpkgs/home.nix"
+
 [nix-home.files]
 "modules/nix-home/home.nix" = "~/.config/nixpkgs/home.nix"
 

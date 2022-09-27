@@ -20,7 +20,22 @@
   home.stateVersion = "21.11";
 
   home.packages = [
+    pkgs.wget
+    pkgs.htop
+    pkgs.vim
+    pkgs.git
+    pkgs.which
+    pkgs.iproute2
     pkgs.nixfmt
+    pkgs.fzf
     pkgs.ncdu
+    pkgs.screen
+    pkgs.tldr
+    pkgs.starship
+    pkgs.unrar
+
+    # for fzf errors
+    # https://github.com/NixOS/nixpkgs/issues/8398#issuecomment-186832814
+    pkgs.glibcLocales
   ];
 }
