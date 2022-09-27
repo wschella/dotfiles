@@ -22,5 +22,6 @@
   home.packages = [
     pkgs.nixfmt
     pkgs.ncdu
+    pkgs.texlive.combined.scheme-full # It's not too bad 3.5G.
   ];
 }
