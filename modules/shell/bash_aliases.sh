@@ -1,7 +1,6 @@
 # Utilities
-alias fuck="sudo $(fc -ln -1)"
-alias please="sudo $(fc -ln -1)"
 alias l="ls -ahGl --color=auto"
+alias s="sudo"
 
 alias sshpub="cat ~/.ssh/id_rsa.pub | c"
 
