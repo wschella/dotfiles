@@ -78,3 +78,16 @@
   pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [safe]
 	directory = /media/wout/Data/Workspace/Prutsing/data-vacuum
+	directory = /media/wout/Data/Workspace/Prutsing/shapeshitter
+	directory = /media/wout/Data/Workspace/Prutsing/site
+	directory = /media/wout/Data/Workspace/Prutsing/brier
+	directory = /media/wout/Data/PhD/Projects/Varia
+	directory = /media/wout/Data/PhD/Projects/procgen-companion
+	directory = /media/wout/Data/PhD/External Repos/AnimalAI_Affordances
+	directory = /media/wout/Data/PhD/Projects/pisa
+	directory = /media/wout/Data/PhD/External Repos/AnimalAI_Affordances_Control
+	directory = /media/wout/Data/PhD/Code/procgen-companion
+	directory = /media/wout/Data/PhD/Code/procgen-companion/.venv/src/mypy
+	directory = /media/wout/Data/PhD/Code/_External/AnimalAI_Affordances
+	directory = /media/wout/Data/PhD/Code/pisa
+	directory = /media/wout/Data/PhD/Code/_Varia
