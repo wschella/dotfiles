@@ -2,8 +2,10 @@ matches:
   - trigger: ":upv"
     replace: Universitat Politècnica de València
     word: true
-  - trigger: ":espanso"
-    replace: Hi there!
+  - trigger: ":vrain"
+    replace: Valencian Research Institute for Artificial Intelligence
+  - trigger: ":eur"
+    replace: "€"
   - trigger: ":date"
     replace: "{{mydate}}"
     vars:

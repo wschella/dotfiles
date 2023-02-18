@@ -1,4 +1,4 @@
 backend: Auto
 toggle_key: RIGHT_ALT
 search_shortcut: ALT+SHIFT+SPACE
-key_delay: 10
+key_delay: 30

@@ -21,11 +21,14 @@ matches:
 
   - trigger: ":nie"
     replace: Y8676496J
-  - trigger: ":rrnf"
+  - trigger: ":rrf"
     replace: 96.06.17-241.46
-  - trigger: ":rrnu"
+  - trigger: ":rrn"
     replace: "96061724146"
-  - trigger: ":id"
+
+  - trigger: ":passport"
+    replace: "EP464139"
+  - trigger: ":idnr"
     replace: 592-1131216-83
-  - trigger: ":isa id"
+  - trigger: ":isa idnr"
     replace: 591-9026729-11
