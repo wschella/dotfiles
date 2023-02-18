@@ -86,3 +86,19 @@ fi
 # This is usefull on multi user installations 
 # https://github.com/NixOS/nix/issues/2033
 export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/wout/.miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/wout/.miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/wout/.miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/wout/.miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
