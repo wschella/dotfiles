@@ -33,6 +33,12 @@ Host falco
     ServerAliveCountMax 3
     HostName falco.dsic.upv.es
 
+Host root@falco
+    User root
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+    HostName falco.dsic.upv.es
+
 Host dmip@falco
     User dmip
     ForwardAgent no
