@@ -40,9 +40,6 @@ export PIPENV_VENV_IN_PROJECT=1
 
 shopt -s cdable_vars
 
-# I like these dirs
-export CDPATH=":/media/wout/Data/Workspace:/media/wout/Data"
-
 # Fix yarn
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
