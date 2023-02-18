@@ -1,3 +1,11 @@
 export PATH="$HOME/.cargo/bin:$PATH"
-eval "$(starship init bash)"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if command -v starship &> /dev/null
+then
+    eval "$(starship init bash)"
+fi
+
+if command -v fzf &> /dev/null
+then
+    [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+fi
