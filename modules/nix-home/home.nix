@@ -21,8 +21,15 @@
 
   home.packages = [
     pkgs.nixfmt
+    pkgs.starship
+    pkgs.fzf
     pkgs.ncdu
-    pkgs.texlive.combined.scheme-full # It's not too bad 3.5G.
+    pkgs.zotero
+    pkgs.espanso
+    pkgs.vim
     pkgs.hollywood
+    pkgs.tldr
+    pkgs.texlive.combined.scheme-full # It's not too bad 3.5G.
+    # pkgs.eid-mw Does not work well with firefox
   ];
 }
