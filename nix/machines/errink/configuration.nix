@@ -32,7 +32,8 @@
     # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-servers/nginx/vhost-options.nix
     virtualHosts = {
       "schellaert.org" = {
-        addSSL = true;
+        # addSSL = true;
+	forceSSL = true;
         enableACME = true;
         default = true;
         root = "/var/www/schellaert.org";
