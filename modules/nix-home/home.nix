@@ -19,7 +19,8 @@
   # changes in each release.
   home.stateVersion = "21.11";
 
-  home.packages = [
+  home.packages = let extraNodePackages = import node/default.nix { };
+  in [
     pkgs.nixfmt
     pkgs.starship
     pkgs.fzf
@@ -31,5 +32,12 @@
     pkgs.tldr
     pkgs.texlive.combined.scheme-full # It's not too bad 3.5G.
     # pkgs.eid-mw Does not work well with firefox
+    pkgs.scrcpy
+    pkgs.ripgrep-all
+
+    # https://code-notes.jhuizy.com/add-custom-npm-to-home-manager/
+    # Execute below (the -16 is for node 16)
+    # nix-shell -p nodePackages.node2nix --command "node2nix -16 -i ./node-packages.json -o node-packages.nix"
+    # extraNodePackages."@githubnext/github-copilot-cli"
   ];
 }

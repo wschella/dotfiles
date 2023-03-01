@@ -40,8 +40,10 @@ export PIPENV_VENV_IN_PROJECT=1
 
 shopt -s cdable_vars
 
-# Fix yarn
+# Add node
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="~/.npm-packages/bin:$PATH"
+export NODE_PATH="$NODE_PATH:~/.npm-packages/lib/node_modules"
 
 # Add cargo
 export PATH="$HOME/.cargo/bin:$PATH"

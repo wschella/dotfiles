@@ -3,3 +3,7 @@
 .dotter/cache.toml
 
 modules/shell/bash_local.sh
+
+modules/nix-home/node/default.nix
+modules/nix-home/node/node-packages.nix
+modules/nix-home/node/node-env.nix
