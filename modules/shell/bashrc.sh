@@ -86,6 +86,11 @@ fi
 # https://github.com/NixOS/nix/issues/2033
 export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
 
+# https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
+if [[ $(type -P "github-copilot-cli") ]] ; then
+    eval "$(github-copilot-cli alias -- "$0")"
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/wout/.miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

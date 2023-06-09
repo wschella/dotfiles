@@ -34,10 +34,6 @@
     # pkgs.eid-mw Does not work well with firefox
     pkgs.scrcpy
     pkgs.ripgrep-all
-
-    # https://code-notes.jhuizy.com/add-custom-npm-to-home-manager/
-    # Execute below (the -16 is for node 16)
-    # nix-shell -p nodePackages.node2nix --command "node2nix -16 -i ./node-packages.json -o node-packages.nix"
-    # extraNodePackages."@githubnext/github-copilot-cli"
+    pkgs.github-copilot-cli
   ];
 }
