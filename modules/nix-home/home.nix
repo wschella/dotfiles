@@ -19,21 +19,41 @@
   # changes in each release.
   home.stateVersion = "21.11";
 
-  home.packages = let extraNodePackages = import node/default.nix { };
-  in [
+  home.packages = [
+    # Essentials
+    pkgs.wget
+    pkgs.htop
+    pkgs.vim
+    pkgs.which
+    pkgs.iproute2
+    pkgs.git
+    pkgs.git-lfs
+    pkgs.unrar
     pkgs.nixfmt
+
+    # Quality of life
     pkgs.starship
     pkgs.fzf
     pkgs.ncdu
-    pkgs.zotero
-    pkgs.espanso
-    pkgs.vim
-    pkgs.hollywood
     pkgs.tldr
+    pkgs.github-copilot-cli
+    pkgs.espanso
+    pkgs.ripgrep-all
+
+    # Applications / tools
+    pkgs.zotero
+    pkgs.lrzip
+    pkgs.scrcpy
+    pkgs.parallel
+    pkgs.hollywood
+
+    # New
+
     # pkgs.texlive.combined.scheme-full # It's not too bad 3.5G.
     # pkgs.eid-mw Does not work well with firefox
-    pkgs.scrcpy
-    pkgs.ripgrep-all
-    pkgs.github-copilot-cli
+
+    # for fzf errors
+    # https://github.com/NixOS/nixpkgs/issues/8398#issuecomment-186832814
+    pkgs.glibcLocales
   ];
 }
