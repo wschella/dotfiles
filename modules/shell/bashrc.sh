@@ -10,20 +10,28 @@ esac
 #------------------------------------------------------------------------------
 # Doing this to avoid clutter
 
-if [ -f $HOME/.bashrc_default ]; then
-    . $HOME/.bashrc_default
+if [ -f $HOME/.config/shell/bashrc_default.sh ]; then
+    . $HOME/.config/shell/bashrc_default.sh
 fi
 
-if [ -f $HOME/.bash_aliases ]; then
-    . $HOME/.bash_aliases
+if [ -f $HOME/.config/shell/bash_aliases.sh ]; then
+    . $HOME/.config/shell/bash_aliases.sh
 fi
 
-if [ -f $HOME/.bash_prompt ]; then
-    . $HOME/.bash_prompt
+if [ -f $HOME/.config/shell/bash_prompt.sh ]; then
+    . $HOME/.config/shell/bash_prompt.sh
 fi
 
-if [ -f $HOME/.bash_local ]; then
-    . $HOME/.bash_local
+if [ -f $HOME/.config/shell/bash_local.sh ]; then
+    . $HOME/.config/shell/bash_local.sh
+fi
+
+if [ -f $HOME/.config/shell/nixhome.sh ]; then
+    . $HOME/.config/shell/nixhome.sh
+fi
+
+if [ -f $HOME/.config/shell/nixoshome.sh ]; then
+    . $HOME/.config/shell/nixoshome.sh
 fi
 
 
@@ -61,33 +69,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Source Nix config & tools
-if [ -f "/etc/profile.d/nix.sh" ] ; then
-    source "/etc/profile.d/nix.sh"
-fi
-
-if [ -d "/nix" ] ; then
-    export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"
-
-    if [ -f "$HOME/.config/nixpkgs/home.nix" ] ; then
-        source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-    fi
-fi
-if [ -d "/etc/nixos" ] ; then
-    export LOCALE_ARCHIVE="/run/current-system/sw/lib/locale/locale-archive"
-fi
-
-if command -v fzf-share >/dev/null; then
-    source "$(fzf-share)/key-bindings.bash"
-    source "$(fzf-share)/completion.bash"
-fi
-
-# This is usefull on multi user installations 
-# https://github.com/NixOS/nix/issues/2033
-export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
-
 # https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
-if [[ $(type -P "github-copilot-cli") ]] ; then
+if command -v "github-copilot-cli" &> /dev/null ; then
     eval "$(github-copilot-cli alias -- "$0")"
 fi
 

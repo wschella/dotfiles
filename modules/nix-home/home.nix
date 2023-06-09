@@ -30,6 +30,7 @@
     pkgs.git-lfs
     pkgs.unrar
     pkgs.nixfmt
+    pkgs.dotter
 
     # Quality of life
     pkgs.starship

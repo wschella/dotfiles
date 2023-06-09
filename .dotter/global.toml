@@ -6,15 +6,15 @@
 
 [shell.files]
 "modules/shell/bashrc.sh"         = "~/.bashrc"
-"modules/shell/bashrc_default.sh" = "~/.bashrc_default"
-"modules/shell/bash_aliases.sh"   = "~/.bash_aliases"
 "modules/shell/inputrc"           = "~/.inputrc"
+"modules/shell/bashrc_default.sh" = "~/.config/shell/bashrc_default.sh"
+"modules/shell/bash_aliases.sh"   = "~/.config/shell/bash_aliases.sh"
 
 [shell_local.files]
-"modules/shell/bash_local.sh" = "~/.bash_local"
+"modules/shell/bash_local.sh" = "~/.config/shell/.bash_local.sh"
 
 [prompt.files]
-"modules/shell/bash_prompt.sh" = "~/.bash_prompt"
+"modules/shell/bash_prompt.sh" = "~/.config/shell/bash_prompt.sh"
 "modules/shell/starship.toml"  = "~/.config/starship.toml"
 
 [ssh.files]
