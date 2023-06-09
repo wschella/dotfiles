@@ -30,7 +30,7 @@
     pkgs.vim
     pkgs.hollywood
     pkgs.tldr
-    pkgs.texlive.combined.scheme-full # It's not too bad 3.5G.
+    # pkgs.texlive.combined.scheme-full # It's not too bad 3.5G.
     # pkgs.eid-mw Does not work well with firefox
     pkgs.scrcpy
     pkgs.ripgrep-all

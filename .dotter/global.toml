@@ -32,10 +32,10 @@
 "modules/node/npmrc" = "~/.npmrc"
 
 [nixos-home.files]
-"modules/nixos-home/home.nix" = "~/.config/nixpkgs/home.nix"
+"modules/nixos-home/home.nix" = "~/.config/home-manager/home.nix"
 
 [nix-home.files]
-"modules/nix-home/home.nix" = "~/.config/nixpkgs/home.nix"
+"modules/nix-home/home.nix" = "~/.config/home-manager/home.nix"
 
 [espanso.files]
 "modules/espanso" = { target = "~/.config/espanso", type = "symbolic" }
