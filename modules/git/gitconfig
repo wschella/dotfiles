@@ -76,6 +76,13 @@
 
   pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
   pr-clean = "!git checkout master ; git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+[init]
+	defaultBranch = master
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
 [safe]
 	directory = /media/wout/Data/Workspace/Prutsing/data-vacuum
 	directory = /media/wout/Data/Workspace/Prutsing/shapeshitter
