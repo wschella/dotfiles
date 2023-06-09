@@ -19,6 +19,10 @@
   # changes in each release.
   home.stateVersion = "21.11";
 
+  # Unrar is unfree
+  # https://github.com/nix-community/home-manager/issues/856
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = [
     # Essentials
     pkgs.wget
