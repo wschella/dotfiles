@@ -1,1 +1,16 @@
+# Options:
+# packages = [
+#   "beets",
+#   "inkscape",
+#   "shell",
+#   "shell_local",
+#   "prompt",
+#   "ssh",
+#   "git",
+#   "python",
+#   "node",
+#   "nixos-home",
+#   "nix-home",
+#   "espanso",
+# ]
 packages = ["shell", "git", "python"]
