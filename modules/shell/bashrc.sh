@@ -26,14 +26,6 @@ if [ -f $HOME/.config/shell/bash_local.sh ]; then
     . $HOME/.config/shell/bash_local.sh
 fi
 
-if [ -f $HOME/.config/shell/nixhome.sh ]; then
-    . $HOME/.config/shell/nixhome.sh
-fi
-
-if [ -f $HOME/.config/shell/nixoshome.sh ]; then
-    . $HOME/.config/shell/nixoshome.sh
-fi
-
 
 #------------------------------------------------------------------------------
 # Path / CD tweaks
