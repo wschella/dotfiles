@@ -5,10 +5,12 @@
 "modules/inkscape" = "~/.config/inkscape"
 
 [shell.files]
-"modules/shell/bashrc.sh"         = "~/.bashrc"
-"modules/shell/inputrc"           = "~/.inputrc"
-"modules/shell/bashrc_default.sh" = "~/.config/shell/bashrc_default.sh"
-"modules/shell/bash_aliases.sh"   = "~/.config/shell/bash_aliases.sh"
+"modules/shell/inputrc"                 = "~/.inputrc"
+"modules/shell/bashrc.sh"               = "~/.bashrc"
+"modules/shell/bashrc_default.sh"       = "~/.config/shell/bashrc_default.sh"
+"modules/shell/bash_profile.sh"         = "~/.bash_profile"
+"modules/shell/bash_profile_default.sh" = "~/.config/shell/bash_profile_default.sh"
+"modules/shell/bash_aliases.sh"         = "~/.config/shell/bash_aliases.sh"
 
 [shell_local.files]
 "modules/shell/bash_local.sh" = "~/.config/shell/.bash_local.sh"
