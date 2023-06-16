@@ -37,7 +37,7 @@
 "modules/nixos-home/home.nix" = "~/.config/home-manager/home.nix"
 
 [nix-home.files]
-"modules/nix-home/home.nix"          = "~/.config/home-manager/home.nix"
+"modules/nix-home/home.nix"          = { target = "~/.config/home-manager/home.nix", type = "symbolic" }
 "modules/nix-home/nixhomeprofile.sh" = "~/.config/home-manager/nixhomeprofile.sh"
 
 [espanso.files]
