@@ -23,6 +23,17 @@
   # https://github.com/nix-community/home-manager/issues/856
   nixpkgs.config.allowUnfree = true;
 
+  # Whether to enable settings that make Home Manager work better on GNU/Linux distributions other than NixOS.
+  # https://nix-community.github.io/home-manager/options.html
+  # We use it e.g. in the hope that `/home/wout/.nix-profile/share/applications/`,
+  # where the .desktop files are located,  is added to the `XDG_DATA_DIRS` environment variable,
+  # so that the desktop environment can find the .desktop files.
+  # https://discourse.nixos.org/t/home-manager-installed-apps-dont-show-up-in-applications-launcher/8523
+  # https://github.com/nix-community/home-manager/issues/1439
+  # NOTE: This modifies stuff, and things break badly in ways I don't understand.
+  # We do it manually in nixhomeprofile.sh instead now.
+  # targets.genericLinux.enable = true;
+
   home.packages = [
     # Essentials
     pkgs.wget
