@@ -7,4 +7,4 @@ fi
 # We just do this manually, modifying XDG_DATA_DIRS is broke everything
 
 # sudo cp .nix-profile/share/applications/* .local/share/applications/
-# sudo cp -r .nix-profile/share/icons/* .local/share/icons/d
+# sudo cp -r .nix-profile/share/icons/* .local/share/icons/

@@ -62,6 +62,7 @@
     pkgs.scrcpy
     pkgs.parallel
     pkgs.hollywood
+    pkgs.masterpdfeditor
 
     # New
 
