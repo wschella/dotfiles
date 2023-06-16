@@ -22,6 +22,8 @@ Host jackt
     User u293138
     Port 23
     HostName u293138.your-storagebox.de
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
 
 #-------------------------------------------------------------------------------
 # UPV
