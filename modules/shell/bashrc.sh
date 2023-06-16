@@ -54,7 +54,9 @@ export PATH="~/.npm-packages/bin:$PATH"
 export NODE_PATH="$NODE_PATH:~/.npm-packages/lib/node_modules"
 
 # Add cargo
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -f "$HOME/.cargo/env" ] ; then
+    . "$HOME/.cargo/env"
+fi
 
 # Add julia to Path
 export PATH="$PATH:/opt/julia/bin"
