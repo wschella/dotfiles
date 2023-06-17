@@ -52,17 +52,20 @@
     pkgs.starship
     pkgs.fzf
     pkgs.ncdu
+    pkgs.nvtop
     pkgs.tldr
     pkgs.github-copilot-cli
     pkgs.espanso
     pkgs.ripgrep-all
 
     # Applications / tools
-    pkgs.zotero
     pkgs.lrzip
     pkgs.scrcpy
     pkgs.parallel
     pkgs.hollywood
+
+    # Graphical
+    pkgs.zotero
     pkgs.masterpdfeditor
 
     # New

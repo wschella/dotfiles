@@ -1,4 +1,7 @@
-export PATH="$HOME/.cargo/bin:$PATH"
+# Add cargo
+if [ -f "$HOME/.cargo/env" ] ; then
+    . "$HOME/.cargo/env"
+fi
 
 if command -v starship &> /dev/null ; then
     eval "$(starship init bash)"
