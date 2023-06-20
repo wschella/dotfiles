@@ -36,9 +36,10 @@ shopt -s cdspell
 # Complete only directories
 # complete -d cd
 
+shopt -u cdable_vars
+
 export PIPENV_VENV_IN_PROJECT=1
 
-shopt -s cdable_vars
 
 # Add node
 export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"

@@ -13,7 +13,7 @@
 "modules/shell/bash_aliases.sh"         = "~/.config/shell/bash_aliases.sh"
 
 [shell_local.files]
-"modules/shell/bash_local.sh" = "~/.config/shell/.bash_local.sh"
+"modules/shell/bash_local.sh" = "~/.config/shell/bash_local.sh"
 
 [prompt.files]
 "modules/shell/bash_prompt.sh" = "~/.config/shell/bash_prompt.sh"
@@ -27,8 +27,9 @@
 "modules/git/gitignore" = "~/.gitignore"
 
 [python.files]
-"modules/python/pep8"     = "~/.config/pep8"
-"modules/python/pylintrc" = "~/.pylintrc"
+"modules/python/pep8"        = "~/.config/pep8"
+"modules/python/pylintrc"    = "~/.pylintrc"
+"modules/python/poetry.toml" = "~/.config/pypoetry/config.toml"
 
 [node.files]
 "modules/node/npmrc" = "~/.npmrc"
