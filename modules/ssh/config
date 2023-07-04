@@ -46,6 +46,10 @@ Host dmip@falco
     ForwardAgent no
     HostName falco.dsic.upv.es
 
+Host vrain
+    User wschell@upvnet.upv.es
+    HostName vrhpcadm1.dsic.upv.es
+
 #-------------------------------------------------------------------------------
 # Zeus
 #-------------------------------------------------------------------------------

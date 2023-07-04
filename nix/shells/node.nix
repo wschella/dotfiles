@@ -1,3 +1,3 @@
 with (import <nixpkgs> { });
 
-mkShell { buildInputs = [ nixfmt yarn nodejs-16_x ]; }
+mkShell { buildInputs = [ nixfmt yarn nodejs-18_x ]; }

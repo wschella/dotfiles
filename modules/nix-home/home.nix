@@ -67,6 +67,7 @@
     # Graphical
     pkgs.zotero
     pkgs.masterpdfeditor
+    pkgs.qbittorrent
 
     # New
 

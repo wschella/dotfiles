@@ -64,6 +64,14 @@ if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -f "$HOME/.asdf/asdf.sh" ] ; then
+    . "$HOME/.asdf/asdf.sh"
+fi
+
+if [ -f "$HOME/.asdf/completions/asdf.bash" ] ; then
+    . "$HOME/.asdf/completions/asdf.bash"
+fi
+
 # https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
 if command -v "github-copilot-cli" &> /dev/null ; then
     eval "$(github-copilot-cli alias -- "$0")"
