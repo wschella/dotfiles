@@ -29,9 +29,9 @@ alias ip4="ip -c -br -4 a"
 alias ip6="ip -c -br -6 a"
 
 # Conda
-alias condcre="conda env create --prefix .env -f environment.yml"
-alias condupt="conda env update --prefix .env --file environment.yml  --prune"
-alias condact="conda activate ./.env"
+alias condcre="conda env create --prefix .venv -f environment.yml"
+alias condupt="conda env update --prefix .venv --file environment.yml  --prune"
+alias condact="conda activate ./.venv"
 alias conddact="conda deactivate"
 
 # Copying and pasting yo
