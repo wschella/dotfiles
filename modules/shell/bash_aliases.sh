@@ -6,6 +6,8 @@ alias sshpub="cat ~/.ssh/id_rsa.pub | c"
 
 alias latexwatch="latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pvc -pdf"
 
+alias dot="code ~/.dotfiles"
+alias vdot="vim ~/.dotfiles"
 alias redotter="(cd ~/.dotfiles/ && dotter deploy)"
 alias rebash="redotter  && source ~/.bashrc"
 alias rehome="rebash && home-manager switch"
@@ -33,6 +35,11 @@ alias condcre="conda env create --prefix .venv -f environment.yml"
 alias condupt="conda env update --prefix .venv --file environment.yml  --prune"
 alias condact="conda activate ./.venv"
 alias conddact="conda deactivate"
+
+# Virtualenv
+alias venvcre="python3 -m venv .venv"
+alias venvact="source ./.venv/bin/activate"
+alias venvdact="deactivate"
 
 # Copying and pasting yo
 alias c="xclip -selection clipboard"
