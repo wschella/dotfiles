@@ -48,6 +48,7 @@ Host dmip@falco
 
 Host vrain
     User wschell@upvnet.upv.es
+    ForwardAgent yes
     HostName vrhpcadm1.dsic.upv.es
 
 #-------------------------------------------------------------------------------
