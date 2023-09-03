@@ -66,7 +66,7 @@
 
     # Graphical
     pkgs.zotero
-    pkgs.masterpdfeditor
+    # pkgs.masterpdfeditor
     pkgs.qbittorrent
 
     # New
@@ -148,6 +148,10 @@
           replace = "ES7400491736792610084091";
         }
         {
+          trigger = ":iban zaak";
+          replace = "BE54890204181997";
+        }
+        {
           trigger = ":visa";
           replace = "5163 8303 6410 0042";
         }
@@ -174,6 +178,10 @@
         {
           trigger = ":isa idnr";
           replace = "591-9026729-11";
+        }
+        {
+          trigger = ":btw";
+          replace = "BE0802692222";
         }
       ];
     };
