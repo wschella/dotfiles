@@ -54,21 +54,17 @@ fi
 # Add julia to Path
 export PATH="$PATH:/opt/julia/bin"
 
-# Add Rye to Path
-if [ -f "$HOME/.rye/env" ] ; then
-    . "$HOME/.rye/env"
-fi
+
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
-
-# set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Add asdf (if it exists)
 if [ -f "$HOME/.asdf/asdf.sh" ] ; then
     . "$HOME/.asdf/asdf.sh"
 fi
@@ -77,6 +73,16 @@ if [ -f "$HOME/.asdf/completions/asdf.bash" ] ; then
     . "$HOME/.asdf/completions/asdf.bash"
 fi
 
+#------------------------------------------------------------------------------
+# Source external
+#------------------------------------------------------------------------------
+
+# Rye
+if [ -f "$HOME/.rye/env" ] ; then
+    . "$HOME/.rye/env"
+fi
+
+# Copilot
 # https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
 if command -v "github-copilot-cli" &> /dev/null ; then
     eval "$(github-copilot-cli alias -- "$0")"
