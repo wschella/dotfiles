@@ -4,11 +4,46 @@ case $- in
       *) return;;
 esac
 
+#------------------------------------------------------------------------------
+# Set path
+#------------------------------------------------------------------------------
+# We do this before sourcing, so the necessary tools are available already.
+
+# Includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    export PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Add node
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="~/.npm-packages/bin:$PATH"
+export NODE_PATH="$NODE_PATH:~/.npm-packages/lib/node_modules"
+
+# Add cargo
+if [ -f "$HOME/.cargo/env" ] ; then
+    . "$HOME/.cargo/env"
+fi
+
+# Add julia
+export PATH="$PATH:/opt/julia/bin"
+
+# Add asdf (if it exists)
+if [ -f "$HOME/.asdf/asdf.sh" ] ; then
+    . "$HOME/.asdf/asdf.sh"
+fi
+
+if [ -f "$HOME/.asdf/completions/asdf.bash" ] ; then
+    . "$HOME/.asdf/completions/asdf.bash"
+fi
 
 #------------------------------------------------------------------------------
 # Sourcing  
 #------------------------------------------------------------------------------
-# Doing this to avoid clutter
+# In external files to avoid clutter.
 
 if [ -f $HOME/.config/shell/bashrc_default.sh ]; then
     . $HOME/.config/shell/bashrc_default.sh
@@ -28,7 +63,7 @@ fi
 
 
 #------------------------------------------------------------------------------
-# Path / CD tweaks
+# CD tweaks
 #------------------------------------------------------------------------------
 # Correct small typo's
 shopt -s cdspell 
@@ -38,40 +73,11 @@ shopt -s cdspell
 
 shopt -u cdable_vars
 
+#------------------------------------------------------------------------------
+# Varia
+#------------------------------------------------------------------------------
+
 export PIPENV_VENV_IN_PROJECT=1
-
-
-# Add node
-export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="~/.npm-packages/bin:$PATH"
-export NODE_PATH="$NODE_PATH:~/.npm-packages/lib/node_modules"
-
-# Add cargo
-if [ -f "$HOME/.cargo/env" ] ; then
-    . "$HOME/.cargo/env"
-fi
-
-# Add julia to Path
-export PATH="$PATH:/opt/julia/bin"
-
-
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    export PATH="$HOME/bin:$PATH"
-fi
-if [ -d "$HOME/.local/bin" ] ; then
-    export PATH="$HOME/.local/bin:$PATH"
-fi
-
-# Add asdf (if it exists)
-if [ -f "$HOME/.asdf/asdf.sh" ] ; then
-    . "$HOME/.asdf/asdf.sh"
-fi
-
-if [ -f "$HOME/.asdf/completions/asdf.bash" ] ; then
-    . "$HOME/.asdf/completions/asdf.bash"
-fi
 
 #------------------------------------------------------------------------------
 # Source external
