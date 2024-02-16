@@ -6,7 +6,8 @@
 
   users.defaultUserShell = pkgs.bash;
   programs.bash.shellInit = ''source ~/.bashrc'';
-
+  
+  # TODO: Sort alphabettically
   environment.systemPackages = with pkgs; [ 
     wget 
     vim
@@ -14,7 +15,7 @@
     git
     dig
     whois
-    ping
+    
     nixfmt
     iproute2
     tldr

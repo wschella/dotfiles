@@ -2,9 +2,9 @@
 {
   # https://jacobneplokh.com/how-to-setup-nextcloud-on-nixos/
   services.nextcloud = {
-    enable = true;
+    enable = false;
     hostName = "nxt.schellaert.org";
-    package = pkgs.nextcloud24;
+    package = pkgs.nextcloud26;
     config.extraTrustedDomains = [ "116.203.110.163" ];
 
     # Use HTTPS for links
@@ -35,6 +35,7 @@
 
   services.postgresql = {
     enable = true;
+    package = pkgs.postgresql_15;
 
     # Ensure the database, user, and permissions always exist
     ensureDatabases = [ "nextcloud" ];

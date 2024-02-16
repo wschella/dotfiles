@@ -1,11 +1,10 @@
 { config, pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ./nextcloud.nix ./utility.nix ];
+  imports = [ ./hardware-configuration.nix ./nextcloud.nix  ./utility.nix ];
 
   networking.hostName = "errink";
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Brussels";
   boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
   boot.loader.grub.devices = [ "/dev/sda" ];
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
@@ -50,12 +49,12 @@
 
   security.acme = {
     acceptTerms = true;
-    email = "wout.schellaert@gmail.com";
+    defaults.email = "wout.schellaert@gmail.com";
   };
 
   # Initial empty root password for easy login:
   users.users.root.initialHashedPassword = "";
-  services.openssh.permitRootLogin = "prohibit-password";
+  services.openssh.settings.PermitRootLogin = "prohibit-password";
 
   services.openssh.enable = true;
 
