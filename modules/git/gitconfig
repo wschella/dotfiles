@@ -12,6 +12,9 @@
   safecrlf = false
   excludesfile = /home/wout/.gitignore
 
+[rerere]
+	enabled = true
+
 [pull]
   rebase = true
 
