@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ./nextcloud.nix  ./utility.nix ];
+  imports = [ ./hardware-configuration.nix ./nextcloud.nix ./utility.nix ];
 
   networking.hostName = "errink";
   i18n.defaultLocale = "en_US.UTF-8";

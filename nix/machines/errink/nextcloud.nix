@@ -1,5 +1,4 @@
-{config, pkgs, ...}:
-{
+{ config, pkgs, ... }: {
   # https://jacobneplokh.com/how-to-setup-nextcloud-on-nixos/
   services.nextcloud = {
     enable = false;
@@ -39,35 +38,40 @@
 
     # Ensure the database, user, and permissions always exist
     ensureDatabases = [ "nextcloud" ];
-    ensureUsers = [
-     { name = "nextcloud";
-       ensurePermissions."DATABASE nextcloud" = "ALL PRIVILEGES";
-     }
-    ];
+    ensureUsers = [{
+      name = "nextcloud";
+      ensurePermissions."DATABASE nextcloud" = "ALL PRIVILEGES";
+    }];
   };
 
   fileSystems."/mnt/storagebox-brella" = {
-      device = "//u275045.your-storagebox.de/backup";
-      fsType = "cifs";
-      options = let
-        # this line prevents hanging on network split
-        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-        permission_opts = "uid=997,gid=998";
-      in ["${automount_opts},${permission_opts},credentials=/etc/nixos/smb-secrets-brella"];
+    device = "//u275045.your-storagebox.de/backup";
+    fsType = "cifs";
+    options = let
+      # this line prevents hanging on network split
+      automount_opts =
+        "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      permission_opts = "uid=997,gid=998";
+    in [
+      "${automount_opts},${permission_opts},credentials=/etc/nixos/smb-secrets-brella"
+    ];
   };
 
   fileSystems."/mnt/storagebox-jackt" = {
-      device = "//u293138.your-storagebox.de/backup";
-      fsType = "cifs";
-      options = let
-        # this line prevents hanging on network split
-        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-        permission_opts = "uid=997,gid=998";
-      in ["${automount_opts},${permission_opts},credentials=/etc/nixos/smb-secrets-jackt"];
+    device = "//u293138.your-storagebox.de/backup";
+    fsType = "cifs";
+    options = let
+      # this line prevents hanging on network split
+      automount_opts =
+        "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      permission_opts = "uid=997,gid=998";
+    in [
+      "${automount_opts},${permission_opts},credentials=/etc/nixos/smb-secrets-jackt"
+    ];
   };
 
   systemd.services."nextcloud-setup" = {
-    requires = ["postgresql.service"];
-    after = ["postgresql.service"];
+    requires = [ "postgresql.service" ];
+    after = [ "postgresql.service" ];
   };
 }

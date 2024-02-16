@@ -1,28 +1,26 @@
-{config, pkgs, ...}:
-{
-  imports =  [
-      (fetchTarball "https://github.com/msteen/nixos-vscode-server/tarball/master")
+{ config, pkgs, ... }: {
+  imports = [
+    (fetchTarball
+      "https://github.com/msteen/nixos-vscode-server/tarball/master")
   ];
 
   users.defaultUserShell = pkgs.bash;
-  programs.bash.shellInit = ''source ~/.bashrc'';
-  
-  # TODO: Sort alphabettically
-  environment.systemPackages = with pkgs; [ 
-    wget 
-    vim
-    htop
-    git
+  programs.bash.shellInit = "source ~/.bashrc";
+
+  environment.systemPackages = with pkgs; [
     dig
-    whois
-    
-    nixfmt
-    iproute2
-    tldr
     fzf
-    which
+    git
+    htop
+    iproute2
     ncdu
+    nixfmt
     starship
+    tldr
+    vim
+    wget
+    which
+    whois
 
     # Rust
     cargo
