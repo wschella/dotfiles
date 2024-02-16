@@ -6,6 +6,9 @@
   time.timeZone = "Europe/Brussels";
   boot.loader.grub.enable = true;
   boot.loader.grub.devices = [ "/dev/sda" ];
+  
+  # https://nixos.wiki/wiki/Visual_Studio_Code
+  programs.nix-ld.enable = true;
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -42,6 +45,17 @@
       "nxt.schellaert.org" = {
         forceSSL = true;
         enableACME = true;
+      };
+
+      "dispatcher.schellaert.org" = {
+        forceSSL = true;
+        enableACME = true;
+        locations = {
+           "/" = {
+	     proxyPass = "http://127.0.0.1:8000/";
+	     recommendedProxySettings = true; 
+	   };
+	};
       };
     };
 
