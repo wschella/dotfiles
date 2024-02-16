@@ -1,12 +1,19 @@
 { config, pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ./nextcloud.nix ./utility.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./utility.nix
+
+    ./site.nix
+    ./nextcloud.nix
+    ./pinocchio.nix
+  ];
 
   networking.hostName = "errink";
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Brussels";
   boot.loader.grub.enable = true;
   boot.loader.grub.devices = [ "/dev/sda" ];
-  
+
   # https://nixos.wiki/wiki/Visual_Studio_Code
   programs.nix-ld.enable = true;
 
@@ -24,41 +31,6 @@
     recommendedOptimisation = true;
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
-
-    # Setup Nextcloud virtual host to listen on ports
-    # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-servers/nginx/vhost-options.nix
-    virtualHosts = {
-      "schellaert.org" = {
-        # addSSL = true;
-        forceSSL = true;
-        enableACME = true;
-        default = true;
-        root = "/var/www/schellaert.org";
-        locations = {
-          "/" = { tryFiles = "$uri $uri.html $uri/index.html index.html"; };
-        };
-        extraConfig = ''
-          error_page 404 /404.html;
-        '';
-      };
-
-      "nxt.schellaert.org" = {
-        forceSSL = true;
-        enableACME = true;
-      };
-
-      "dispatcher.schellaert.org" = {
-        forceSSL = true;
-        enableACME = true;
-        locations = {
-           "/" = {
-	     proxyPass = "http://127.0.0.1:8000/";
-	     recommendedProxySettings = true; 
-	   };
-	};
-      };
-    };
-
   };
 
   security.acme = {

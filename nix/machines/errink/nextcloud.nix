@@ -1,5 +1,12 @@
 { config, pkgs, ... }: {
   # https://jacobneplokh.com/how-to-setup-nextcloud-on-nixos/
+
+  # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-servers/nginx/vhost-options.nix
+  services.nginx.virtualHosts."nxt.schellaert.org" = {
+    forceSSL = true;
+    enableACME = true;
+  };
+
   services.nextcloud = {
     enable = true;
     hostName = "nxt.schellaert.org";
