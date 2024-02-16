@@ -1,9 +1,11 @@
 { config, pkgs, ... }: {
   imports = [
     (fetchTarball
-      "https://github.com/msteen/nixos-vscode-server/tarball/master")
+      "https://github.com/nix-community/nixos-vscode-server/tarball/master")
   ];
 
+  services.vscode-server.enable = true;
+  
   users.defaultUserShell = pkgs.bash;
   programs.bash.shellInit = "source ~/.bashrc";
 
@@ -31,5 +33,4 @@
     # https://github.com/NixOS/nixpkgs/issues/8398#issuecomment-186832814
     glibcLocales
   ];
-  services.vscode-server.enable = true;
 }
