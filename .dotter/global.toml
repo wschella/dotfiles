@@ -34,9 +34,12 @@
 [node.files]
 "modules/node/npmrc" = "~/.npmrc"
 
-[nixos-home.files]
-"modules/nixos-home/home.nix" = "~/.config/home-manager/home.nix"
-
 [nix-home.files]
 "modules/nix-home/home.nix"          = { target = "~/.config/home-manager/home.nix", type = "symbolic" }
 "modules/nix-home/nixhomeprofile.sh" = "~/.config/home-manager/nixhomeprofile.sh"
+
+[nixos-home.files]
+"modules/nixos-home/home.nix" = "~/.config/home-manager/home.nix"
+
+[nixos-machines-errink.files]
+"nix/machines/errink/" = "/etc/nixos/"
