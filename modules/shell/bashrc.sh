@@ -23,22 +23,13 @@ export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="~/.npm-packages/bin:$PATH"
 export NODE_PATH="$NODE_PATH:~/.npm-packages/lib/node_modules"
 
-# Add cargo
-if [ -f "$HOME/.cargo/env" ] ; then
-    . "$HOME/.cargo/env"
-fi
-
 # Add julia
 export PATH="$PATH:/opt/julia/bin"
 
-# Add asdf (if it exists)
-if [ -f "$HOME/.asdf/asdf.sh" ] ; then
-    . "$HOME/.asdf/asdf.sh"
-fi
+# Add bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
 
-if [ -f "$HOME/.asdf/completions/asdf.bash" ] ; then
-    . "$HOME/.asdf/completions/asdf.bash"
-fi
 
 #------------------------------------------------------------------------------
 # Sourcing  
@@ -61,6 +52,33 @@ if [ -f $HOME/.config/shell/bash_local.sh ]; then
     . $HOME/.config/shell/bash_local.sh
 fi
 
+#------------------------------------------------------------------------------
+# Source external
+#------------------------------------------------------------------------------
+# Add cargo
+if [ -f "$HOME/.cargo/env" ] ; then
+    . "$HOME/.cargo/env"
+fi
+
+# Add asdf (if it exists)
+if [ -f "$HOME/.asdf/asdf.sh" ] ; then
+    . "$HOME/.asdf/asdf.sh"
+fi
+
+if [ -f "$HOME/.asdf/completions/asdf.bash" ] ; then
+    . "$HOME/.asdf/completions/asdf.bash"
+fi
+
+# Rye
+if [ -f "$HOME/.rye/env" ] ; then
+    . "$HOME/.rye/env"
+fi
+
+# Copilot
+# https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
+if command -v "github-copilot-cli" &> /dev/null ; then
+    eval "$(github-copilot-cli alias -- "$0")"
+fi
 
 #------------------------------------------------------------------------------
 # CD tweaks
@@ -78,18 +96,3 @@ shopt -u cdable_vars
 #------------------------------------------------------------------------------
 
 export PIPENV_VENV_IN_PROJECT=1
-
-#------------------------------------------------------------------------------
-# Source external
-#------------------------------------------------------------------------------
-
-# Rye
-if [ -f "$HOME/.rye/env" ] ; then
-    . "$HOME/.rye/env"
-fi
-
-# Copilot
-# https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
-if command -v "github-copilot-cli" &> /dev/null ; then
-    eval "$(github-copilot-cli alias -- "$0")"
-fi
