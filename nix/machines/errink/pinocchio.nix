@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ bun ];
+  environment.systemPackages = with pkgs; [ bun nodejs_20 ];
   # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-servers/nginx/vhost-options.nix
   services.nginx.virtualHosts."dispatcher.schellaert.org" = {
     forceSSL = true;
