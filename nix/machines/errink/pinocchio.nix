@@ -9,6 +9,7 @@
         proxyPass = "http://127.0.0.1:8000/";
         recommendedProxySettings = true;
       };
+      "/public" = { root = "/home/wout/pinocchio-dispatcher/public"; };
     };
   };
 }
