@@ -5,7 +5,7 @@
 
     ./site.nix
     ./nextcloud.nix
-    ./pinocchio.nix
+    # ./pinocchio.nix
   ];
 
   networking.hostName = "errink";
