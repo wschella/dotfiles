@@ -5,6 +5,7 @@
 
     ./site.nix
     ./nextcloud.nix
+    ./forgejo.nix
     # ./pinocchio.nix
   ];
 
