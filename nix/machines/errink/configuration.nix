@@ -62,6 +62,28 @@
     ];
   };
 
+  # Storage
+  fileSystems."/mnt/storagebox-jackt" = {
+    device = "//u293138.your-storagebox.de/backup";
+    fsType = "cifs";
+    options = let
+      # this line prevents hanging on network split
+      automount_opts =
+        "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      # Make root owner, let storage group have rwx. Not optimal, as different storage group members can screw eachother, but setting per directory permissions is too much work for now.
+      # For some reason, does not work. Let everybody have control!
+      permission_opts = "uid=0,gid=1500,dir_mode=0777,file_mode=0777"; 
+    in [
+      "${automount_opts},${permission_opts},credentials=/etc/nixos/smb-secrets-jackt"
+    ];
+  };
+
+  # # Create group, in which we can add users such as nextcloud and forgejo that have access
+  # users.groups.storage = {  
+  #   gid = 1500; # completely arbitrary
+  #   members = [ "root" ];
+  # };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

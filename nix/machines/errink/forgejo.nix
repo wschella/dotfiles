@@ -12,12 +12,22 @@
     };
   };
 
+  # users.users.forgejo = {
+  #   extraGroups = [ "storage" ];
+  # };
 
   services.forgejo = {
     enable = true;
     database.type = "postgres";
+  
     # Enable support for Git Large File Storage
     lfs.enable = true;
+    
+    # Store in a different place
+    # stateDir = "/mnt/storagebox-jackt/forgejo"; # Doesn't work because conf/locale tries to symlink
+    repositoryRoot = "/mnt/storagebox-jackt/forgejo/repositories";
+    lfs.contentDir = "/mnt/storagebox-jackt/forgejo/data/lfs";
+
     settings = {
       server = {
         DOMAIN = "git.schellaert.org";
