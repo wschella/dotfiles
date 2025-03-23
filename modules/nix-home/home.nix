@@ -46,7 +46,7 @@
     pkgs.git
     pkgs.git-lfs
     pkgs.unrar
-    pkgs.nixfmt
+    pkgs.nixfmt-classic
     pkgs.dotter
     pkgs.xclip
 
@@ -54,9 +54,9 @@
     pkgs.starship
     pkgs.fzf
     pkgs.ncdu
-    pkgs.nvtop
+    pkgs.nvtopPackages.full
     pkgs.tldr
-    pkgs.github-copilot-cli
+    pkgs.gh
     pkgs.espanso
     pkgs.ripgrep-all
 
@@ -67,7 +67,7 @@
     pkgs.hollywood
 
     # Graphical
-    pkgs.zotero
+    # pkgs.zotero
     # pkgs.masterpdfeditor
     pkgs.qbittorrent
 

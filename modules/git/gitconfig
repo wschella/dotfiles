@@ -148,3 +148,23 @@
 	directory = /media/Data/PhD/Code/affordances/Control-suite
 	directory = /media/Data/PhD/Code/affordances/GIBSONA
 	directory = /media/Data/PhD/Code/AAI/procgen-companion
+	directory = /media/Data/Workspace/Production/mail-to-meet
+	directory = /media/Data/Workspace/Production
+	directory = /media/Data/Workspace/Production/name-invoice
+	directory = /media/Data/PhD/_Submission/2024_06_TIST
+	directory = /media/Data/PhD/_Submission/2023_05_Nature_Pinocchio/final
+	directory = /media/Data/PhD/Code/workbench
+	directory = /media/Data/PhD/Code/lass/lass-bigbench
+	directory = /media/Data/PhD/Code/lass/lass-bigbench/bigbench
+	directory = /media/Data/PhD/Resources/Thesis Graphics
+	directory = /media/Data/PhD/_Submission/2022_02_JAIR_Your_Prompt_Is_My_Command/overleaf
+	directory = /media/Data/PhD/_Submission/2022_05_IJCAI_Reject_Before_You_Run/overleaf
+	directory = /media/Data/PhD/_Submission/2024_06_TIST_Language_Assessors
+	directory = /media/Data/PhD/Code/lass/predbench/AssessorBenchmark
+	directory = /media/Data/PhD/Code/pinocchio/pinocchio-public
+	directory = /media/Data/Workspace/Production/site
+	directory = /media/Data/PhD/Code/pisa/pisa
+	directory = /media/Data/PhD/Code/pisa/pisa-private
+	directory = /media/Data/Workspace/Commission/deepseek
+[credential]
+	helper = store

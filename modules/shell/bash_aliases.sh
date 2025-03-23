@@ -1,6 +1,7 @@
 # Utilities
 alias l="ls -ahGl --color=auto"
 alias s="sudo"
+alias \?\?="gh copilot suggest"
 
 alias sshpub="cat ~/.ssh/id_rsa.pub | c"
 

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Proxy the real vpnc and enable weak authentication to allow connecting to UPV VPN
+# Or is it weak encryption?
+echo "Proxying vpnc with weak encryption enabled: $@"
+/usr/sbin/real_vpnc --enable-weak-encryption "$@"

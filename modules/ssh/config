@@ -56,7 +56,7 @@ Host vrain
 Host vrain-compute
     User wschell@upvnet.upv.es
     ForwardAgent yes
-    HostName vrhpc4.dsic.upv.es
+    HostName vrhpc6.dsic.upv.es
     ServerAliveInterval 15
     ServerAliveCountMax 3
     ProxyCommand ssh -q -W %h:%p vrain
