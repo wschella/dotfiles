@@ -166,5 +166,7 @@
 	directory = /media/Data/PhD/Code/pisa/pisa
 	directory = /media/Data/PhD/Code/pisa/pisa-private
 	directory = /media/Data/Workspace/Commission/deepseek
+	directory = /media/Data/Brain
+	directory = /media/Data/Workspace/Commission/benny
 [credential]
 	helper = store
